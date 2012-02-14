@@ -293,7 +293,7 @@
 
 1329237433 g:\software\projects\leveleditor\define.h
 
-1329238645 g:\software\projects\leveleditor\carea.h
+1329256616 g:\software\projects\leveleditor\carea.h
 	"CMap.h"
 
 1329244901 g:\software\projects\leveleditor\cmap.h
@@ -325,7 +325,7 @@
 1329254501 source:g:\software\projects\leveleditor\capp_onloop.cpp
 	"CApp.h"
 
-1329256240 source:g:\software\projects\leveleditor\capp_onrender.cpp
+1329256313 source:g:\software\projects\leveleditor\capp_onrender.cpp
 	"CApp.h"
 
 1329245134 source:g:\software\projects\leveleditor\carea.cpp
@@ -346,9 +346,12 @@
 1329236488 source:g:\software\projects\leveleditor\ctile.cpp
 	"CTile.h"
 
-1329246024 source:g:\software\projects\leveleditor\capp_onevent.cpp
+1329256616 source:g:\software\projects\leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
+	"CApp.h"
+
+1329246024 D
 
 1329255664 g:\software\projects\leveleditor\ctilewindow.h
 	"CArea.h"
@@ -357,4 +360,79 @@
 
 1329256303 source:g:\software\projects\leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
+
+1329256303 ow.h"
+
+1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.cpp
+	"CApp.h"
+
+1329250860 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.h
+	<SDL.h>
+	"Define.h"
+	"CArea.h"
+	"CCamera.h"
+	"CEvent.h"
+	"CSurface.h"
+
+1329240198 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\define.h
+
+1329252908 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.h
+	"CMap.h"
+
+1329250860 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.h
+	<SDL.h>
+	<vector>
+	"CTile.h"
+	"CSurface.h"
+
+1329240198 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctile.h
+	"Define.h"
+
+1329240198 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\csurface.h
+	<SDL.h>
+	<SDL_image.h>
+
+1329240198 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ccamera.h
+	<SDL.h>
+	"Define.h"
+
+1329240198 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cevent.h
+	<SDL.h>
+
+1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
+	"CApp.h"
+
+1329253452 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
+	"CApp.h"
+	"CMap.h"
+	"CApp.h"
+
+1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
+	"CApp.h"
+
+1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onloop.cpp
+	"CApp.h"
+
+1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onrender.cpp
+	"CApp.h"
+
+1329252563 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
+	"CArea.h"
+
+1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ccamera.cpp
+	"CCamera.h"
+
+1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cevent.cpp
+	"CEvent.h"
+
+1329250860 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.cpp
+	"CMap.h"
+
+1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\csurface.cpp
+	"CSurface.h"
+
+1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctile.cpp
+	"CTile.h"
+
+1329240198 15450bb899627f92473d2d6f4a3d2070d85d2
 
