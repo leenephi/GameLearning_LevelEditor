@@ -1,6 +1,7 @@
 //==============================================================================
 #include "CApp.h"
 #include "CMap.h"
+#include "CApp.h"
 
 //==============================================================================
 void CApp::OnEvent(SDL_Event* Event)
@@ -38,11 +39,16 @@ void CApp::OnLButtonDown(int mX, int mY)
     int newTileID = 10;
     int newTypeID = 1;
 
-    tile = CArea::AreaControl.GetTile(mX + CCamera::CameraControl.GetX(), mY + CCamera::CameraControl.GetY());
+    if((mX - CCamera::CameraControl.GetX()) >= 0 && (mY - CCamera::CameraControl.GetY()) >= 0 &&
+       ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
+       ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
+    {
+        tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
 
-    CMap* Map;
+        CMap* Map;
 
-    Map->SetTile(tile, newTileID, newTypeID);
+        Map->SetTile(tile, newTileID, newTypeID);
+    }
 }
 
 void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle) {
@@ -52,11 +58,16 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
         int newTileID = 10;
         int newTypeID = 1;
 
-        tile = CArea::AreaControl.GetTile(mX + CCamera::CameraControl.GetX(), mY + CCamera::CameraControl.GetY());
+        if((mX - CCamera::CameraControl.GetX()) >= 0 && (mY - CCamera::CameraControl.GetY()) >= 0 &&
+           ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
+           ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
+        {
+            tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
 
-        CMap* Map;
+            CMap* Map;
 
-        Map->SetTile(tile, newTileID, newTypeID);
+            Map->SetTile(tile, newTileID, newTypeID);
+        }
 	}
 }
 
