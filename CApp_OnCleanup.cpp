@@ -4,6 +4,7 @@
 //==============================================================================
 void CApp::OnCleanup() {
 	CArea::AreaControl.OnCleanup();
+	TileWindow.OnCleanup();
     SDL_FreeSurface(Surf_Display);
     SDL_Quit();
 }

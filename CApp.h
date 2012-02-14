@@ -12,6 +12,7 @@
 #include "CCamera.h"
 #include "CEvent.h"
 #include "CSurface.h"
+#include "CTileWindow.h"
 
 //==============================================================================
 class CApp : public CEvent {
@@ -22,6 +23,8 @@ class CApp : public CEvent {
 
     public:
         CApp();
+
+        CTileWindow TileWindow;
 
         int currentTileID;
 

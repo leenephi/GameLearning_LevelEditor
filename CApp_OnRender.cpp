@@ -13,6 +13,8 @@ void CApp::OnRender() {
 
 	CArea::AreaControl.OnRender(Surf_Display, CCamera::CameraControl.GetX(), CCamera::CameraControl.GetY());
 
+	TileWindow.OnRender(Surf_Display);
+
 	SDL_Flip(Surf_Display);
 }
 

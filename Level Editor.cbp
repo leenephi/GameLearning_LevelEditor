@@ -50,6 +50,8 @@
 		<Unit filename="CSurface.h" />
 		<Unit filename="CTile.cpp" />
 		<Unit filename="CTile.h" />
+		<Unit filename="CTileWindow.cpp" />
+		<Unit filename="CTileWindow.h" />
 		<Unit filename="Define.h" />
 		<Extensions>
 			<code_completion />
