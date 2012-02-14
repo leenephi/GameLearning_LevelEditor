@@ -29,7 +29,7 @@ class CMap {
 
         void    SetTile(CTile* tile, int newTile, int newType);
 
-        void    SaveMap();
+        void    SaveMap(char* File);
 };
 
 //==============================================================================

@@ -85,7 +85,7 @@ void CMap::SetTile(CTile* tile, int newTile, int newType)
     tile->TypeID = newType;
 }
 
-void CMap::SaveMap()
+void CMap::SaveMap(char * File)
 {
 
     /*  FILE * pFile;
@@ -94,7 +94,7 @@ void CMap::SaveMap()
   fwrite (buffer , 1 , sizeof(buffer) , pFile );
   fclose (pFile);*/
 
-    FILE* FileHandle = fopen("creator.map", "w");
+    FILE* FileHandle = fopen(File, "w");
 
     if(FileHandle != NULL)
     {
