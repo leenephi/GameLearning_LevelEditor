@@ -365,7 +365,7 @@
 1329252908 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.h
 	"CMap.h"
 
-1329250860 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.h
+1329257016 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.h
 	<SDL.h>
 	<vector>
 	"CTile.h"
@@ -385,7 +385,7 @@
 1329240198 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cevent.h
 	<SDL.h>
 
-1329240198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
+1329256431 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
 1329253452 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp

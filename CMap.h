@@ -28,6 +28,8 @@ class CMap {
         CTile*	GetTile(int X, int Y);
 
         void    SetTile(CTile* tile, int newTile, int newType);
+
+        void    SaveMap();
 };
 
 //==============================================================================
