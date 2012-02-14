@@ -1,0 +1,5 @@
+Level Editor for our learning game project
+
+Allows the user to place the tiles as they want.. and later on add enemies/items.
+
+Upon closing the level editor will save the entire level into .map files to then load into the game.

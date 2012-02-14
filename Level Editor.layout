@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="CApp.h" open="1" top="1" tabpos="2">
+		<Cursor position="617" topLine="0" />
+	</File>
+	<File name="CApp_OnCleanup.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="243" topLine="0" />
+	</File>
+	<File name="CApp_OnEvent.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="911" topLine="21" />
+	</File>
+	<File name="CApp_OnInit.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="574" topLine="0" />
+	</File>
+	<File name="CApp_OnLoop.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="208" topLine="0" />
+	</File>
+	<File name="CApp_OnRender.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="445" topLine="0" />
+	</File>
+	<File name="CArea.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2285" topLine="82" />
+	</File>
+	<File name="CArea.h" open="0" top="0" tabpos="0">
+		<Cursor position="707" topLine="13" />
+	</File>
+	<File name="CEvent.h" open="0" top="0" tabpos="0">
+		<Cursor position="335" topLine="0" />
+	</File>
+	<File name="CMap.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1740" topLine="55" />
+	</File>
+	<File name="CMap.h" open="0" top="0" tabpos="0">
+		<Cursor position="549" topLine="6" />
+	</File>
+	<File name="Define.h" open="0" top="0" tabpos="0">
+		<Cursor position="116" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
