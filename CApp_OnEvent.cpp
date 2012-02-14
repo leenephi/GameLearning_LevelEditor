@@ -1,5 +1,6 @@
 //==============================================================================
 #include "CApp.h"
+#include "CMap.h"
 
 //==============================================================================
 void CApp::OnEvent(SDL_Event* Event)
@@ -33,7 +34,30 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
 
 void CApp::OnLButtonDown(int mX, int mY)
 {
+    CTile* tile;
+    int newTileID = 10;
+    int newTypeID = 1;
 
+    tile = CArea::AreaControl.GetTile(mX + CCamera::CameraControl.GetX(), mY + CCamera::CameraControl.GetY());
+
+    CMap* Map;
+
+    Map->SetTile(tile, newTileID, newTypeID);
+}
+
+void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle) {
+	if (Left)
+	{
+	    CTile* tile;
+        int newTileID = 10;
+        int newTypeID = 1;
+
+        tile = CArea::AreaControl.GetTile(mX + CCamera::CameraControl.GetX(), mY + CCamera::CameraControl.GetY());
+
+        CMap* Map;
+
+        Map->SetTile(tile, newTileID, newTypeID);
+	}
 }
 
 //------------------------------------------------------------------------------

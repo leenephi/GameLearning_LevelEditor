@@ -78,3 +78,9 @@ CTile* CMap::GetTile(int X, int Y)
 }
 
 //=============================================================================
+
+void CMap::SetTile(CTile* tile, int newTile, int newType)
+{
+    tile->TileID = newTile;
+    tile->TypeID = newType;
+}

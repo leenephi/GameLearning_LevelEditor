@@ -36,6 +36,8 @@ class CApp : public CEvent {
 
         	void OnLButtonDown(int mX, int mY);
 
+        	void OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle);
+
             void OnExit();
 
         void OnLoop();

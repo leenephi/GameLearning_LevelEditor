@@ -26,6 +26,8 @@ class CMap {
 
     public:
         CTile*	GetTile(int X, int Y);
+
+        void    SetTile(CTile* tile, int newTile, int newType);
 };
 
 //==============================================================================
