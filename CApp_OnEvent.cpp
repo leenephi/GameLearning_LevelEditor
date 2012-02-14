@@ -33,7 +33,7 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
 
 void CApp::OnLButtonDown(int mX, int mY)
 {
-    CMap::
+
 }
 
 //------------------------------------------------------------------------------

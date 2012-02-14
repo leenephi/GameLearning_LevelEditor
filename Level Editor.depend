@@ -279,3 +279,42 @@
 1329236488 source:g:\software\projects\level editor\ctile.cpp
 	"CTile.h"
 
+1329237698 source:g:\software\projects\leveleditor\capp.cpp
+	"CApp.h"
+
+1329239510 g:\software\projects\leveleditor\capp.h
+	<SDL.h>
+	"Define.h"
+	"CArea.h"
+	"CCamera.h"
+	"CEvent.h"
+	"CSurface.h"
+
+1329237433 g:\software\projects\leveleditor\define.h
+
+1329238645 g:\software\projects\leveleditor\carea.h
+	"CMap.h"
+
+1329238684 g:\software\projects\leveleditor\cmap.h
+	<SDL.h>
+	<vector>
+	"CTile.h"
+	"CSurface.h"
+
+1329236488 g:\software\projects\leveleditor\ctile.h
+	"Define.h"
+
+1329236488 g:\software\projects\leveleditor\csurface.h
+	<SDL.h>
+	<SDL_image.h>
+
+1329236488 g:\software\projects\leveleditor\ccamera.h
+	<SDL.h>
+	"Define.h"
+
+1329236488 g:\software\projects\leveleditor\cevent.h
+	<SDL.h>
+
+1329237864 source:g:\software\projects\leveleditor\capp_oncleanup.cpp
+	"CApp.h"
+
