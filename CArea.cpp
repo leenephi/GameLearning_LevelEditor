@@ -1,5 +1,9 @@
 //=============================================================================
 #include "CArea.h"
+#include <fstream>
+#include <iostream>
+#include <sstream>
+using namespace std;
 
 //=============================================================================
 CArea CArea::AreaControl;
@@ -152,50 +156,50 @@ bool CArea::OnSave(char* File, char* tilesetFile)
 
     int AreaSize = 3;
 
-    FILE* FileHandle = fopen(File, "w");
+    ofstream areafile(File);
 
-    if(FileHandle == NULL)
+
+    if(areafile.is_open())
     {
-        return false;
-    }
+        areafile << tilesetFile;
+        areafile << "\n";
+        areafile << AreaSize;
+        areafile << "\n";
 
-    char tilesetbuff[] = {*tilesetFile, '\n'};
-    fwrite(tilesetbuff, 1, sizeof(tilesetbuff), FileHandle);
+        int mapSaveCount = 1;
 
-    int areasizebuff[] = {AreaSize, '\n'};
-    fwrite(areasizebuff, 1, sizeof(areasizebuff), FileHandle);
-
-    int mapSaveCount = 1;
-
-    for(int X = 0; X < AreaSize; X++)
-    {
-        for(int Y = 0; Y < AreaSize; Y++)
+        for(int X = 0; X < AreaSize; X++)
         {
-
-            CMap tempMap;
-            tempMap = MapList.front();
-
-            // later we'll base this off of user input
-            char* mapName = "./maps/level_map_%d.map", mapSaveCount;
-
-            if(tempMap.OnSave(mapName) == false)
+            for(int Y = 0; Y < AreaSize; Y++)
             {
-                fclose(FileHandle);
-                return false;
+
+                CMap tempMap;
+                tempMap = MapList.front();
+
+                // later we'll base this off of user input
+
+                char mapName[30] = "";
+                sprintf(mapName, "./mapsave/level_map_%d.map", mapSaveCount);
+
+                if(tempMap.OnSave(mapName) == false)
+                {
+                    areafile.close();
+                    return false;
+                }
+
+                areafile << mapName;
+                areafile << " ";
+
+                MapList.erase(MapList.begin());
+
+                mapSaveCount++;
             }
-
-            char* mapnamebuff[] = {mapName, " "};
-            fwrite(mapnamebuff, 1, sizeof(mapnamebuff), FileHandle);
-
-            MapList.erase(MapList.begin());
-
-            mapSaveCount++;
+            areafile << "\n";
         }
-        char newline[] = {'\n'};
-        fwrite(newline, 1 , sizeof(newline), FileHandle);
+
+        areafile.close();
+        return true;
     }
-
-    fclose(FileHandle);
-
-    return true;
+    cout << "fail" << endl;
+    return false;
 }

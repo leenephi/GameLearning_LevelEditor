@@ -1,5 +1,9 @@
 //=============================================================================
 #include "CMap.h"
+#include <fstream>
+#include <iostream>
+#include <sstream>
+using namespace std;
 
 //=============================================================================
 CMap::CMap()
@@ -94,44 +98,44 @@ void CMap::SetTile(CTile* tile, int newTile, int newType)
     tile->TypeID = newType;
 }
 
-bool CMap::OnSave(char * File)
-{
 
-    /*  FILE * pFile;
-      char buffer[] = { 'x' , 'y' , 'z' };
-      pFile = fopen ( "myfile.bin" , "wb" );
-      fwrite (buffer , 1 , sizeof(buffer) , pFile );
-      fclose (pFile);*/
-
-    FILE* FileHandle = fopen(File, "w");
-
-    if(FileHandle == NULL)
-    {
-        return false;
+    /*
+    int main () {
+        ofstream myfile;
+        myfile.open ("example.txt");
+        myfile << "Writing this to a file.\n";
+        myfile.close();
+        return 0;
     }
+    */
 
-    for(int Y = 0; Y < MAP_HEIGHT; Y++)
+
+bool CMap::OnSave(char* File)
+{
+    ofstream mapfile(File);
+    if(mapfile.is_open())
     {
-        for(int X = 0; X < MAP_WIDTH; X++)
+        for(int Y = 0; Y < MAP_HEIGHT; Y++)
         {
+            for(int X = 0; X < MAP_WIDTH; X++)
+            {
 
-            CTile tempTile;
+                CTile tempTile;
+                tempTile = TileList.front();
 
-            tempTile = TileList.front();
+                mapfile << tempTile.TileID;
+                mapfile << ":";
+                mapfile << tempTile.TypeID;
+                mapfile << " ";
 
-            int buffer[] = {tempTile.TileID, ':', tempTile.TypeID, ' '};
+                TileList.erase(TileList.begin());
 
-            fwrite(buffer, 1, sizeof(buffer), FileHandle);
-
-            TileList.erase(TileList.begin());
-
+            }
+            mapfile << "\n";
         }
 
-        char newline[] = {'\n'};
-        fwrite(newline, 1 , sizeof(newline), FileHandle);
+        mapfile.close();
+
+        return true;
     }
-
-    fclose(FileHandle);
-
-    return true;
 }
