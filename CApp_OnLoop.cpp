@@ -2,7 +2,8 @@
 #include "CApp.h"
 
 //==============================================================================
-void CApp::OnLoop() {
+void CApp::OnLoop()
+{
 
     TileWindow.OnLoop();
 

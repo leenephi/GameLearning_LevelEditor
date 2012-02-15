@@ -40,8 +40,8 @@ void CApp::OnLButtonDown(int mX, int mY)
     int newTypeID = 1;
 
     if((mX - CCamera::CameraControl.GetX()) >= 0 && (mY - CCamera::CameraControl.GetY()) >= 0 &&
-       ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
-       ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
+            ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
+            ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
     {
         tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
 
@@ -51,16 +51,17 @@ void CApp::OnLButtonDown(int mX, int mY)
     }
 }
 
-void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle) {
-	if (Left)
-	{
-	    CTile* tile;
+void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle)
+{
+    if (Left)
+    {
+        CTile* tile;
         int newTileID = 10;
         int newTypeID = 1;
 
         if((mX - CCamera::CameraControl.GetX()) >= 0 && (mY - CCamera::CameraControl.GetY()) >= 0 &&
-           ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
-           ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
+                ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
+                ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
         {
             tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
 
@@ -68,7 +69,7 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
 
             Map->SetTile(tile, newTileID, newTypeID);
         }
-	}
+    }
 }
 
 //------------------------------------------------------------------------------

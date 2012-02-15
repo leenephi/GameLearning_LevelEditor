@@ -30,7 +30,10 @@ int CApp::OnExecute()
         OnRender();
     }
 
-    OnCleanup();
+    if(OnCleanup() == false)
+    {
+        return -2;
+    }
 
     return 0;
 }

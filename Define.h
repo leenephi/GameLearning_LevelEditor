@@ -1,5 +1,5 @@
 #ifndef _DEFINE_H_
-    #define _DEFINE_H_
+#define _DEFINE_H_
 
 #define MAP_WIDTH	40
 #define MAP_HEIGHT	40

@@ -5,56 +5,66 @@
 CCamera CCamera::CameraControl;
 
 //==============================================================================
-CCamera::CCamera() {
-	X = Y = 0;
+CCamera::CCamera()
+{
+    X = Y = 0;
 
-	TargetX = TargetY = NULL;
+    TargetX = TargetY = NULL;
 
-	TargetMode = TARGET_MODE_NORMAL;
+    TargetMode = TARGET_MODE_NORMAL;
 }
 
 //==============================================================================
-void CCamera::OnMove(int MoveX, int MoveY) {
-	X += MoveX;
-	Y += MoveY;
+void CCamera::OnMove(int MoveX, int MoveY)
+{
+    X += MoveX;
+    Y += MoveY;
 }
 
 //==============================================================================
-int CCamera::GetX() {
-	if(TargetX != NULL) {
-		if(TargetMode == TARGET_MODE_CENTER) {
-			return *TargetX - (WWIDTH / 2);
-		}
+int CCamera::GetX()
+{
+    if(TargetX != NULL)
+    {
+        if(TargetMode == TARGET_MODE_CENTER)
+        {
+            return *TargetX - (WWIDTH / 2);
+        }
 
-		return *TargetX;
-	}
+        return *TargetX;
+    }
 
-	return X;
+    return X;
 }
 
 //------------------------------------------------------------------------------
-int CCamera::GetY() {
-	if(TargetY != NULL) {
-		if(TargetMode == TARGET_MODE_CENTER) {
-			return *TargetY - (WHEIGHT / 2);
-		}
+int CCamera::GetY()
+{
+    if(TargetY != NULL)
+    {
+        if(TargetMode == TARGET_MODE_CENTER)
+        {
+            return *TargetY - (WHEIGHT / 2);
+        }
 
-		return *TargetY;
-	}
+        return *TargetY;
+    }
 
-	return Y;
+    return Y;
 }
 
 //==============================================================================
-void CCamera::SetPos(int X, int Y) {
-	this->X = X;
-	this->Y = Y;
+void CCamera::SetPos(int X, int Y)
+{
+    this->X = X;
+    this->Y = Y;
 }
 
 //------------------------------------------------------------------------------
-void CCamera::SetTarget(int* X, int* Y) {
-	TargetX = X;
-	TargetY = Y;
+void CCamera::SetTarget(int* X, int* Y)
+{
+    TargetX = X;
+    TargetY = Y;
 }
 
 //==============================================================================

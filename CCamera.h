@@ -1,6 +1,6 @@
 //==============================================================================
 #ifndef _CCAMERA_H_
-    #define _CCAMERA_H_
+#define _CCAMERA_H_
 
 #include <SDL.h>
 
@@ -8,40 +8,42 @@
 
 //==============================================================================
 
-enum {
-	TARGET_MODE_NORMAL = 0,
-	TARGET_MODE_CENTER
+enum
+{
+    TARGET_MODE_NORMAL = 0,
+    TARGET_MODE_CENTER
 };
 
 //==============================================================================
-class CCamera {
-	public:
-		static CCamera CameraControl;
+class CCamera
+{
+public:
+    static CCamera CameraControl;
 
-	private:
-		int X;
-		int Y;
+private:
+    int X;
+    int Y;
 
-		int* TargetX;
-		int* TargetY;
+    int* TargetX;
+    int* TargetY;
 
-	public:
-		int TargetMode;
+public:
+    int TargetMode;
 
-	public:
-		CCamera();
+public:
+    CCamera();
 
-	public:
-		void OnMove(int MoveX, int MoveY);
+public:
+    void OnMove(int MoveX, int MoveY);
 
-	public:
-		int GetX();
-		int GetY();
+public:
+    int GetX();
+    int GetY();
 
-	public:
-		void SetPos(int X, int Y);
+public:
+    void SetPos(int X, int Y);
 
-		void SetTarget(int* X, int* Y);
+    void SetTarget(int* X, int* Y);
 };
 
 //==============================================================================

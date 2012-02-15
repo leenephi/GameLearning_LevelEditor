@@ -2,22 +2,27 @@
 #include "CMap.h"
 
 //=============================================================================
-CMap::CMap() {
-	Surf_Tileset = NULL;
+CMap::CMap()
+{
+    Surf_Tileset = NULL;
 }
 
 //=============================================================================
-bool CMap::OnLoad(char* File) {
+bool CMap::OnLoad(char* File)
+{
     TileList.clear();
 
     FILE* FileHandle = fopen(File, "r");
 
-    if(FileHandle == NULL) {
+    if(FileHandle == NULL)
+    {
         return false;
     }
 
-    for(int Y = 0;Y < MAP_HEIGHT;Y++) {
-        for(int X = 0;X < MAP_WIDTH;X++) {
+    for(int Y = 0; Y < MAP_HEIGHT; Y++)
+    {
+        for(int X = 0; X < MAP_WIDTH; X++)
+        {
             CTile tempTile;
 
             fscanf(FileHandle, "%d:%d ", &tempTile.TileID, &tempTile.TypeID);
@@ -33,32 +38,36 @@ bool CMap::OnLoad(char* File) {
 }
 
 //-----------------------------------------------------------------------------
-void CMap::OnRender(SDL_Surface* Surf_Display, int MapX, int MapY) {
-	if(Surf_Tileset == NULL) return;
+void CMap::OnRender(SDL_Surface* Surf_Display, int MapX, int MapY)
+{
+    if(Surf_Tileset == NULL) return;
 
-	int TilesetWidth  = Surf_Tileset->w / TILE_SIZE;
-	int TilesetHeight = Surf_Tileset->h / TILE_SIZE;
+    int TilesetWidth  = Surf_Tileset->w / TILE_SIZE;
+    int TilesetHeight = Surf_Tileset->h / TILE_SIZE;
 
-	int ID = 0;
+    int ID = 0;
 
-	for(int Y = 0;Y < MAP_HEIGHT;Y++) {
-		for(int X = 0;X < MAP_WIDTH;X++) {
-			if(TileList[ID].TypeID == TILE_TYPE_NONE) {
-				ID++;
-				continue;
-			}
+    for(int Y = 0; Y < MAP_HEIGHT; Y++)
+    {
+        for(int X = 0; X < MAP_WIDTH; X++)
+        {
+            if(TileList[ID].TypeID == TILE_TYPE_NONE)
+            {
+                ID++;
+                continue;
+            }
 
-			int tX = MapX + (X * TILE_SIZE);
-			int tY = MapY + (Y * TILE_SIZE);
+            int tX = MapX + (X * TILE_SIZE);
+            int tY = MapY + (Y * TILE_SIZE);
 
-			int TilesetX = (TileList[ID].TileID % TilesetWidth) * TILE_SIZE;
-			int TilesetY = (TileList[ID].TileID / TilesetWidth) * TILE_SIZE;
+            int TilesetX = (TileList[ID].TileID % TilesetWidth) * TILE_SIZE;
+            int TilesetY = (TileList[ID].TileID / TilesetWidth) * TILE_SIZE;
 
-			CSurface::OnDraw(Surf_Display, Surf_Tileset, tX, tY, TilesetX, TilesetY, TILE_SIZE, TILE_SIZE);
+            CSurface::OnDraw(Surf_Display, Surf_Tileset, tX, tY, TilesetX, TilesetY, TILE_SIZE, TILE_SIZE);
 
-			ID++;
-		}
-	}
+            ID++;
+        }
+    }
 }
 
 //=============================================================================
@@ -85,38 +94,44 @@ void CMap::SetTile(CTile* tile, int newTile, int newType)
     tile->TypeID = newType;
 }
 
-void CMap::SaveMap(char * File)
+bool CMap::OnSave(char * File)
 {
 
     /*  FILE * pFile;
-  char buffer[] = { 'x' , 'y' , 'z' };
-  pFile = fopen ( "myfile.bin" , "wb" );
-  fwrite (buffer , 1 , sizeof(buffer) , pFile );
-  fclose (pFile);*/
+      char buffer[] = { 'x' , 'y' , 'z' };
+      pFile = fopen ( "myfile.bin" , "wb" );
+      fwrite (buffer , 1 , sizeof(buffer) , pFile );
+      fclose (pFile);*/
 
     FILE* FileHandle = fopen(File, "w");
 
-    if(FileHandle != NULL)
+    if(FileHandle == NULL)
     {
-        for(int Y = 0;Y < MAP_HEIGHT;Y++) {
-            for(int X = 0;X < MAP_WIDTH;X++) {
+        return false;
+    }
 
-                CTile tempTile;
+    for(int Y = 0; Y < MAP_HEIGHT; Y++)
+    {
+        for(int X = 0; X < MAP_WIDTH; X++)
+        {
 
-                tempTile = TileList.front();
+            CTile tempTile;
 
-                int buffer[] = {tempTile.TileID, ':', tempTile.TypeID, ' '};
+            tempTile = TileList.front();
 
-                fwrite(buffer, 1, sizeof(buffer), FileHandle);
+            int buffer[] = {tempTile.TileID, ':', tempTile.TypeID, ' '};
 
-                TileList.erase(TileList.begin());
+            fwrite(buffer, 1, sizeof(buffer), FileHandle);
 
-            }
+            TileList.erase(TileList.begin());
 
-            char newline[] = {'\n'};
-            fwrite(newline, 1 , sizeof(newline), FileHandle);
         }
 
-        fclose(FileHandle);
+        char newline[] = {'\n'};
+        fwrite(newline, 1 , sizeof(newline), FileHandle);
     }
+
+    fclose(FileHandle);
+
+    return true;
 }

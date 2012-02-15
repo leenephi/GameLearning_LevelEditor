@@ -2,7 +2,7 @@
 // SDL Tutorial 1
 //==============================================================================
 #ifndef _CAPP_H_
-    #define _CAPP_H_
+#define _CAPP_H_
 
 #include <SDL.h>
 
@@ -15,39 +15,40 @@
 #include "CTileWindow.h"
 
 //==============================================================================
-class CApp : public CEvent {
-    private:
-        bool            Running;
+class CApp : public CEvent
+{
+private:
+    bool            Running;
 
-        SDL_Surface*    Surf_Display;
+    SDL_Surface*    Surf_Display;
 
-    public:
-        CApp();
+public:
+    CApp();
 
-        CTileWindow TileWindow;
+    CTileWindow TileWindow;
 
-        int currentTileID;
+    int currentTileID;
 
-        int OnExecute();
+    int OnExecute();
 
-    public:
-        bool OnInit();
+public:
+    bool OnInit();
 
-        void OnEvent(SDL_Event* Event);
+    void OnEvent(SDL_Event* Event);
 
-        	void OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode);
+    void OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode);
 
-        	void OnLButtonDown(int mX, int mY);
+    void OnLButtonDown(int mX, int mY);
 
-        	void OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle);
+    void OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle);
 
-            void OnExit();
+    void OnExit();
 
-        void OnLoop();
+    void OnLoop();
 
-        void OnRender();
+    void OnRender();
 
-        void OnCleanup();
+    bool OnCleanup();
 };
 
 //==============================================================================

@@ -1,6 +1,6 @@
 //==============================================================================
 #ifndef _CMAP_H_
-    #define _CMAP_H_
+#define _CMAP_H_
 
 #include <SDL.h>
 #include <vector>
@@ -9,27 +9,28 @@
 #include "CSurface.h"
 
 //==============================================================================
-class CMap {
-	public:
-		SDL_Surface*			Surf_Tileset;
+class CMap
+{
+public:
+    SDL_Surface*			Surf_Tileset;
 
-	private:
-		std::vector<CTile>      TileList;
+private:
+    std::vector<CTile>      TileList;
 
-	public:
-		CMap();
+public:
+    CMap();
 
-	public:
-		bool OnLoad(char* File);
+public:
+    bool OnLoad(char* File);
 
-		void OnRender(SDL_Surface* Surf_Display, int MapX, int MapY);
+    void OnRender(SDL_Surface* Surf_Display, int MapX, int MapY);
 
-    public:
-        CTile*	GetTile(int X, int Y);
+public:
+    CTile*	GetTile(int X, int Y);
 
-        void    SetTile(CTile* tile, int newTile, int newType);
+    void    SetTile(CTile* tile, int newTile, int newType);
 
-        void    SaveMap(char* File);
+    bool    OnSave(char* File);
 };
 
 //==============================================================================
