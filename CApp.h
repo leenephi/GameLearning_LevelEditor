@@ -27,7 +27,8 @@ public:
 
     CTileWindow TileWindow;
 
-    int currentTileID;
+    int newTileID;
+    int newTypeID;
 
     int OnExecute();
 

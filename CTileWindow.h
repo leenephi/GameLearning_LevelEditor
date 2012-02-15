@@ -35,6 +35,8 @@ public:
     virtual void OnRender(SDL_Surface* Surf_Display);
 
     virtual void OnCleanup();
+
+    int GetTileID(int mX, int mY);
 };
 
 #endif // CTILEWINDOW_H_INCLUDED

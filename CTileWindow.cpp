@@ -52,3 +52,32 @@ void CTileWindow::OnCleanup()
 
     Surf_TileWindow = NULL;
 }
+
+//------------------------------------------------------------------------------
+int CTileWindow::GetTileID(int mX, int mY)
+{
+
+    int TilesetWidth  = Width;
+    int TilesetHeight = Height;
+
+    int ID = 0;
+
+    for(int Y = 0; Y < TilesetHeight; Y += TILE_SIZE)
+    {
+        for(int X = 0; X < TilesetWidth; X += TILE_SIZE)
+        {
+
+            int tileX = X;
+            int tileY = Y;
+
+            // if the mouse click was within the bounds of this tile...
+            if(mX > tileX && mX < tileX + TILE_SIZE &&
+               mY > tileY && mY < tileY + TILE_SIZE)
+               {
+                   // then return the tile's ID!
+                   return ID;
+               }
+            ID++;
+        }
+    }
+}

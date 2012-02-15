@@ -26,6 +26,9 @@ bool CApp::OnInit()
 
     SDL_EnableKeyRepeat(1, SDL_DEFAULT_REPEAT_INTERVAL / 3);
 
+    newTileID = 10;
+    newTypeID = 1;
+
     return true;
 }
 
