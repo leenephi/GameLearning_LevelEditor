@@ -43,25 +43,13 @@ void CApp::OnLButtonDown(int mX, int mY)
     int newTileID = 10;
     int newTypeID = 1;
 
-    if((mX - CCamera::CameraControl.GetX()) >= 0 && (mY - CCamera::CameraControl.GetY()) >= 0 &&
-            ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
-            ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
+    if((mX < 32 && mY < 128))
     {
-        tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
 
-        CMap* Map;
-
-        Map->SetTile(tile, newTileID, newTypeID);
     }
-}
-
-void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle)
-{
-    if (Left)
+    if(!(mX < 32 && mY < 128))
     {
-        CTile* tile;
-        int newTileID = 10;
-        int newTypeID = 1;
+
 
         if((mX - CCamera::CameraControl.GetX()) >= 0 && (mY - CCamera::CameraControl.GetY()) >= 0 &&
                 ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
@@ -72,6 +60,30 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
             CMap* Map;
 
             Map->SetTile(tile, newTileID, newTypeID);
+        }
+    }
+}
+
+void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle)
+{
+    if (Left)
+    {
+        if(!(mX < 32 && mY < 128))
+        {
+            CTile* tile;
+            int newTileID = 10;
+            int newTypeID = 1;
+
+            if((mX - CCamera::CameraControl.GetX()) >= 0 && (mY - CCamera::CameraControl.GetY()) >= 0 &&
+                    ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
+                    ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
+            {
+                tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
+
+                CMap* Map;
+
+                Map->SetTile(tile, newTileID, newTypeID);
+            }
         }
     }
 }
