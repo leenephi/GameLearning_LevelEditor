@@ -1,5 +1,9 @@
 //=============================================================================
 #include "CMap.h"
+#include <fstream>
+#include <iostream>
+#include <sstream>
+using namespace std;
 
 //=============================================================================
 CMap::CMap()
@@ -94,21 +98,22 @@ void CMap::SetTile(CTile* tile, int newTile, int newType)
     tile->TypeID = newType;
 }
 
-bool CMap::OnSave(char * File)
-{
 
-    /*  FILE * pFile;
-      char buffer[] = { 'x' , 'y' , 'z' };
-      pFile = fopen ( "myfile.bin" , "wb" );
-      fwrite (buffer , 1 , sizeof(buffer) , pFile );
-      fclose (pFile);*/
-
-    FILE* FileHandle = fopen(File, "w");
-
-    if(FileHandle == NULL)
-    {
-        return false;
+    /*
+    int main () {
+        ofstream myfile;
+        myfile.open ("example.txt");
+        myfile << "Writing this to a file.\n";
+        myfile.close();
+        return 0;
     }
+    */
+
+
+bool CMap::OnSave(char* File)
+{
+    ofstream mapfile;
+    mapfile.open (File);
 
     for(int Y = 0; Y < MAP_HEIGHT; Y++)
     {
@@ -116,22 +121,19 @@ bool CMap::OnSave(char * File)
         {
 
             CTile tempTile;
-
             tempTile = TileList.front();
 
-            int buffer[] = {tempTile.TileID, ':', tempTile.TypeID, ' '};
-
-            fwrite(buffer, 1, sizeof(buffer), FileHandle);
+            mapfile << tempTile.TileID;
+            mapfile << ":";
+            mapfile << tempTile.TypeID;
+            mapfile << " ";
 
             TileList.erase(TileList.begin());
-
         }
-
-        char newline[] = {'\n'};
-        fwrite(newline, 1 , sizeof(newline), FileHandle);
+        mapfile << "\n";
     }
 
-    fclose(FileHandle);
+    mapfile.close();
 
     return true;
 }

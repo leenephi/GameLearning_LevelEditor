@@ -643,7 +643,7 @@
 1329279061 d:\programming\codeblocks\projects\leveleditor\carea.h
 	"CMap.h"
 
-1329280543 d:\programming\codeblocks\projects\leveleditor\cmap.h
+1329283571 d:\programming\codeblocks\projects\leveleditor\cmap.h
 	<SDL.h>
 	<vector>
 	"CTile.h"
@@ -697,8 +697,11 @@
 1329274006 source:d:\programming\codeblocks\projects\leveleditor\cevent.cpp
 	"CEvent.h"
 
-1329280540 source:d:\programming\codeblocks\projects\leveleditor\cmap.cpp
+1329283554 source:d:\programming\codeblocks\projects\leveleditor\cmap.cpp
 	"CMap.h"
+	<fstream>
+	<iostream>
+	<sstream>
 
 1329274007 source:d:\programming\codeblocks\projects\leveleditor\csurface.cpp
 	"CSurface.h"
@@ -709,6 +712,9 @@
 1329268911 source:d:\programming\codeblocks\projects\leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
 
-1329281041 source:d:\programming\codeblocks\projects\leveleditor\carea.cpp
+1329283731 source:d:\programming\codeblocks\projects\leveleditor\carea.cpp
 	"CArea.h"
+	<fstream>
+	<iostream>
+	<sstream>
 

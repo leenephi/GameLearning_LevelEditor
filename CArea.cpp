@@ -1,5 +1,9 @@
 //=============================================================================
 #include "CArea.h"
+#include <fstream>
+#include <iostream>
+#include <sstream>
+using namespace std;
 
 //=============================================================================
 CArea CArea::AreaControl;
@@ -152,18 +156,14 @@ bool CArea::OnSave(char* File, char* tilesetFile)
 
     int AreaSize = 3;
 
-    FILE* FileHandle = fopen(File, "w");
+    ofstream areafile;
+    areafile.open (File);
 
-    if(FileHandle == NULL)
-    {
-        return false;
-    }
 
-    char tilesetbuff[] = {*tilesetFile, '\n'};
-    fwrite(tilesetbuff, 1, sizeof(tilesetbuff), FileHandle);
-
-    int areasizebuff[] = {AreaSize, '\n'};
-    fwrite(areasizebuff, 1, sizeof(areasizebuff), FileHandle);
+    areafile << tilesetFile;
+    areafile << "\n";
+    areafile << AreaSize;
+    areafile << "\n";
 
     int mapSaveCount = 1;
 
@@ -176,26 +176,27 @@ bool CArea::OnSave(char* File, char* tilesetFile)
             tempMap = MapList.front();
 
             // later we'll base this off of user input
-            char* mapName = "./maps/level_map_%d.map", mapSaveCount;
+
+            char* mapName = "./maps/level_map_%d.map";
+            sprintf( mapName, "%d", mapSaveCount);
 
             if(tempMap.OnSave(mapName) == false)
             {
-                fclose(FileHandle);
+                areafile.close();
                 return false;
             }
 
-            char* mapnamebuff[] = {mapName, " "};
-            fwrite(mapnamebuff, 1, sizeof(mapnamebuff), FileHandle);
+            areafile << mapName;
+            areafile << mapSaveCount;
 
             MapList.erase(MapList.begin());
 
             mapSaveCount++;
         }
-        char newline[] = {'\n'};
-        fwrite(newline, 1 , sizeof(newline), FileHandle);
+        areafile << "\n";
     }
 
-    fclose(FileHandle);
+    areafile.close();
 
     return true;
 }
