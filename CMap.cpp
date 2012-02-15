@@ -112,28 +112,30 @@ void CMap::SetTile(CTile* tile, int newTile, int newType)
 
 bool CMap::OnSave(char* File)
 {
-    ofstream mapfile;
-    mapfile.open (File);
-
-    for(int Y = 0; Y < MAP_HEIGHT; Y++)
+    ofstream mapfile(File);
+    if(mapfile.is_open())
     {
-        for(int X = 0; X < MAP_WIDTH; X++)
+        for(int Y = 0; Y < MAP_HEIGHT; Y++)
         {
+            for(int X = 0; X < MAP_WIDTH; X++)
+            {
 
-            CTile tempTile;
-            tempTile = TileList.front();
+                CTile tempTile;
+                tempTile = TileList.front();
 
-            mapfile << tempTile.TileID;
-            mapfile << ":";
-            mapfile << tempTile.TypeID;
-            mapfile << " ";
+                mapfile << tempTile.TileID;
+                mapfile << ":";
+                mapfile << tempTile.TypeID;
+                mapfile << " ";
 
-            TileList.erase(TileList.begin());
+                TileList.erase(TileList.begin());
+
+            }
+            mapfile << "\n";
         }
-        mapfile << "\n";
+
+        mapfile.close();
+
+        return true;
     }
-
-    mapfile.close();
-
-    return true;
 }

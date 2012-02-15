@@ -1,7 +1,7 @@
 //==============================================================================
 #include "CApp.h"
 #include "CMap.h"
-#include "CApp.h"
+#include "CArea.h"
 
 //==============================================================================
 void CApp::OnEvent(SDL_Event* Event)
@@ -25,6 +25,9 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
         break;
     case SDLK_RIGHT:
         CCamera::CameraControl.OnMove(-CAMERA_SPEED,  0);
+        break;
+    case SDLK_ESCAPE:
+        CArea::AreaControl.OnSave("./mapsave/savearea.area", "./tilesets/game_tiles_1.png");
         break;
 
     default:

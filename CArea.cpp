@@ -156,47 +156,50 @@ bool CArea::OnSave(char* File, char* tilesetFile)
 
     int AreaSize = 3;
 
-    ofstream areafile;
-    areafile.open (File);
+    ofstream areafile(File);
 
 
-    areafile << tilesetFile;
-    areafile << "\n";
-    areafile << AreaSize;
-    areafile << "\n";
-
-    int mapSaveCount = 1;
-
-    for(int X = 0; X < AreaSize; X++)
+    if(areafile.is_open())
     {
-        for(int Y = 0; Y < AreaSize; Y++)
-        {
-
-            CMap tempMap;
-            tempMap = MapList.front();
-
-            // later we'll base this off of user input
-
-            char* mapName = "./maps/level_map_%d.map";
-            sprintf( mapName, "%d", mapSaveCount);
-
-            if(tempMap.OnSave(mapName) == false)
-            {
-                areafile.close();
-                return false;
-            }
-
-            areafile << mapName;
-            areafile << mapSaveCount;
-
-            MapList.erase(MapList.begin());
-
-            mapSaveCount++;
-        }
+        areafile << tilesetFile;
         areafile << "\n";
+        areafile << AreaSize;
+        areafile << "\n";
+
+        int mapSaveCount = 1;
+
+        for(int X = 0; X < AreaSize; X++)
+        {
+            for(int Y = 0; Y < AreaSize; Y++)
+            {
+
+                CMap tempMap;
+                tempMap = MapList.front();
+
+                // later we'll base this off of user input
+
+                char mapName[30] = "";
+                sprintf(mapName, "./mapsave/level_map_%d.map", mapSaveCount);
+
+                if(tempMap.OnSave(mapName) == false)
+                {
+                    areafile.close();
+                    return false;
+                }
+
+                areafile << mapName;
+                areafile << " ";
+
+                MapList.erase(MapList.begin());
+
+                mapSaveCount++;
+            }
+            areafile << "\n";
+        }
+
+        areafile.close();
+        return true;
     }
-
-    areafile.close();
-
-    return true;
+    cout << "fail" << endl;
+    return false;
 }
