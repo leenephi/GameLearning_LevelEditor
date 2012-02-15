@@ -403,7 +403,7 @@
 1329313098 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329319373 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
+1329322051 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
 	"CArea.h"
@@ -417,7 +417,7 @@
 1329313098 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onrender.cpp
 	"CApp.h"
 
-1329321418 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
+1329322051 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
 	"CArea.h"
 	<fstream>
 	<iostream>
@@ -429,7 +429,7 @@
 1329313098 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cevent.cpp
 	"CEvent.h"
 
-1329321466 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.cpp
+1329322052 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.cpp
 	"CMap.h"
 	<fstream>
 	<iostream>
