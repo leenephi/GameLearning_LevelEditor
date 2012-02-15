@@ -279,10 +279,10 @@
 1329236488 source:g:\software\projects\level editor\ctile.cpp
 	"CTile.h"
 
-1329237698 source:g:\software\projects\leveleditor\capp.cpp
+1329316326 source:g:\software\projects\leveleditor\capp.cpp
 	"CApp.h"
 
-1329255611 g:\software\projects\leveleditor\capp.h
+1329316326 g:\software\projects\leveleditor\capp.h
 	<SDL.h>
 	"Define.h"
 	"CArea.h"
@@ -291,65 +291,71 @@
 	"CSurface.h"
 	"CTileWindow.h"
 
-1329237433 g:\software\projects\leveleditor\define.h
+1329316326 g:\software\projects\leveleditor\define.h
 
-1329256616 g:\software\projects\leveleditor\carea.h
+1329316326 g:\software\projects\leveleditor\carea.h
 	"CMap.h"
 
-1329244901 g:\software\projects\leveleditor\cmap.h
+1329316326 g:\software\projects\leveleditor\cmap.h
 	<SDL.h>
 	<vector>
 	"CTile.h"
 	"CSurface.h"
 
-1329236488 g:\software\projects\leveleditor\ctile.h
+1329316326 g:\software\projects\leveleditor\ctile.h
 	"Define.h"
 
-1329236488 g:\software\projects\leveleditor\csurface.h
+1329316326 g:\software\projects\leveleditor\csurface.h
 	<SDL.h>
 	<SDL_image.h>
 
-1329236488 g:\software\projects\leveleditor\ccamera.h
+1329316326 g:\software\projects\leveleditor\ccamera.h
 	<SDL.h>
 	"Define.h"
 
-1329236488 g:\software\projects\leveleditor\cevent.h
+1329316326 g:\software\projects\leveleditor\cevent.h
 	<SDL.h>
 
-1329254202 source:g:\software\projects\leveleditor\capp_oncleanup.cpp
+1329316326 source:g:\software\projects\leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329255734 source:g:\software\projects\leveleditor\capp_oninit.cpp
+1329316326 source:g:\software\projects\leveleditor\capp_oninit.cpp
 	"CApp.h"
 
-1329254501 source:g:\software\projects\leveleditor\capp_onloop.cpp
+1329316326 source:g:\software\projects\leveleditor\capp_onloop.cpp
 	"CApp.h"
 
-1329256313 source:g:\software\projects\leveleditor\capp_onrender.cpp
+1329316326 source:g:\software\projects\leveleditor\capp_onrender.cpp
 	"CApp.h"
 
-1329245134 source:g:\software\projects\leveleditor\carea.cpp
+1329322340 source:g:\software\projects\leveleditor\carea.cpp
 	"CArea.h"
+	<fstream>
+	<iostream>
+	<sstream>
 
-1329236488 source:g:\software\projects\leveleditor\ccamera.cpp
+1329316326 source:g:\software\projects\leveleditor\ccamera.cpp
 	"CCamera.h"
 
-1329236488 source:g:\software\projects\leveleditor\cevent.cpp
+1329316326 source:g:\software\projects\leveleditor\cevent.cpp
 	"CEvent.h"
 
-1329245414 source:g:\software\projects\leveleditor\cmap.cpp
+1329322340 source:g:\software\projects\leveleditor\cmap.cpp
 	"CMap.h"
+	<fstream>
+	<iostream>
+	<sstream>
 
-1329236488 source:g:\software\projects\leveleditor\csurface.cpp
+1329316326 source:g:\software\projects\leveleditor\csurface.cpp
 	"CSurface.h"
 
-1329236488 source:g:\software\projects\leveleditor\ctile.cpp
+1329316326 source:g:\software\projects\leveleditor\ctile.cpp
 	"CTile.h"
 
-1329256616 source:g:\software\projects\leveleditor\capp_onevent.cpp
+1329322340 source:g:\software\projects\leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
-	"CApp.h"
+	"CArea.h"
 
 1329246024 D
 
