@@ -84,3 +84,39 @@ void CMap::SetTile(CTile* tile, int newTile, int newType)
     tile->TileID = newTile;
     tile->TypeID = newType;
 }
+
+void CMap::SaveMap(char * File)
+{
+
+    /*  FILE * pFile;
+  char buffer[] = { 'x' , 'y' , 'z' };
+  pFile = fopen ( "myfile.bin" , "wb" );
+  fwrite (buffer , 1 , sizeof(buffer) , pFile );
+  fclose (pFile);*/
+
+    FILE* FileHandle = fopen(File, "w");
+
+    if(FileHandle != NULL)
+    {
+        for(int Y = 0;Y < MAP_HEIGHT;Y++) {
+            for(int X = 0;X < MAP_WIDTH;X++) {
+
+                CTile tempTile;
+
+                tempTile = TileList.front();
+
+                int buffer[] = {tempTile.TileID, ':', tempTile.TypeID, ' '};
+
+                fwrite(buffer, 1, sizeof(buffer), FileHandle);
+
+                TileList.erase(TileList.begin());
+
+            }
+
+            char newline[] = {'\n'};
+            fwrite(newline, 1 , sizeof(newline), FileHandle);
+        }
+
+        fclose(FileHandle);
+    }
+}

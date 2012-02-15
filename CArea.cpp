@@ -78,6 +78,8 @@ void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY) {
 
 //-----------------------------------------------------------------------------
 void CArea::OnCleanup() {
+
+
 	if(Surf_Tileset) {
 		SDL_FreeSurface(Surf_Tileset);
 	}
