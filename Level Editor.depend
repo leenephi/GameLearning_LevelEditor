@@ -406,24 +406,24 @@
 1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cevent.h
 	<SDL.h>
 
-1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
+1329325086 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329325015 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
+1329341037 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
 	"CArea.h"
 
-1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
+1329340179 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
 	"CApp.h"
 
-1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onloop.cpp
+1329332651 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onloop.cpp
 	"CApp.h"
 
 1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onrender.cpp
 	"CApp.h"
 
-1329324950 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
+1329332651 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
 	"CArea.h"
 	<fstream>
 	<iostream>
@@ -736,6 +736,6 @@
 	"CCamera.h"
 	"CSurface.h"
 
-1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
+1329340179 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
 
