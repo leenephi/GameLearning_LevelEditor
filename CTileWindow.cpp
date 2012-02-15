@@ -38,7 +38,8 @@ void CTileWindow::OnLoop()
 //------------------------------------------------------------------------------
 void CTileWindow::OnRender(SDL_Surface* Surf_Display)
 {
-    CSurface::OnDraw(Surf_Display, Surf_TileWindow, CCamera::CameraControl.GetX() + X, CCamera::CameraControl.GetY() + Y);
+    CSurface::OnDraw(Surf_Display, Surf_TileWindow, 0, 0);
+    //CSurface::OnDraw(Surf_Display, Surf_Entity, X - CCamera::CameraControl.GetX(), Y - CCamera::CameraControl.GetY() + 2, CurrentFrameCol * Width, (CurrentFrameRow + 5) * Height, Width, Height);
 }
 
 //------------------------------------------------------------------------------
