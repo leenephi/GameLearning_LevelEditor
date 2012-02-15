@@ -28,6 +28,7 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
         break;
     case SDLK_ESCAPE:
         CArea::AreaControl.OnSave("./mapsave/savearea.area", "./tilesets/game_tiles_1.png");
+        CApp::OnCleanup();
         break;
 
     default:

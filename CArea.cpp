@@ -178,7 +178,7 @@ bool CArea::OnSave(char* File, char* tilesetFile)
 
                 // later we'll base this off of user input
 
-                char mapName[30] = "";
+                char mapName[30];
                 sprintf(mapName, "./mapsave/level_map_%d.map", mapSaveCount);
 
                 if(tempMap.OnSave(mapName) == false)
