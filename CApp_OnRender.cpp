@@ -12,9 +12,13 @@ void CApp::OnRender()
 
     SDL_FillRect(Surf_Display, &Rect, 0);
 
+    SDL_FillRect(Surf_Display, &overlay, 255);
+
     CArea::AreaControl.OnRender(Surf_Display, CCamera::CameraControl.GetX(), CCamera::CameraControl.GetY());
 
     TileWindow.OnRender(Surf_Display);
+
+
 
     SDL_Flip(Surf_Display);
 }
