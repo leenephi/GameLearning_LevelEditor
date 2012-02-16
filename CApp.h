@@ -22,6 +22,8 @@ private:
 
     SDL_Surface*    Surf_Display;
 
+    SDL_Surface*    Surf_Overlay;
+
 public:
     CApp();
 
@@ -34,6 +36,8 @@ public:
 
     int mXold;
     int mYold;
+
+    SDL_Rect overlay;
 
     int OnExecute();
 
