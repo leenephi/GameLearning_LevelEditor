@@ -372,7 +372,7 @@
 1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.cpp
 	"CApp.h"
 
-1329344110 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.h
+1329410854 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.h
 	<SDL.h>
 	"Define.h"
 	"CArea.h"
@@ -409,7 +409,7 @@
 1329325086 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329405014 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
+1329411595 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
 	"CArea.h"
@@ -736,6 +736,6 @@
 	"CCamera.h"
 	"CSurface.h"
 
-1329344110 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
+1329409385 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
 
