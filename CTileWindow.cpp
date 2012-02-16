@@ -54,7 +54,7 @@ void CTileWindow::OnCleanup()
 }
 
 //------------------------------------------------------------------------------
-int CTileWindow::GetTileID(int mX, int mY)
+int CTileWindow::GetTileID(int mX, int mY, int &TileType)
 {
 
     int TilesetWidth  = Width;
@@ -75,6 +75,43 @@ int CTileWindow::GetTileID(int mX, int mY)
                mY > tileY && mY < tileY + TILE_SIZE)
                {
                    // then return the tile's ID!
+
+            char switcher;
+
+            if (ID >= 0 && ID <= 5)
+                switcher = 'a';
+            else if (ID >= 6 && ID <= 11)
+                switcher = 'b';
+            else
+                switcher = 'c';
+
+            switch(switcher)
+            {
+                case 'a':
+                {
+                    TileType = 1;
+                    break;
+                }
+                case 'b':
+                {
+                    TileType = 2;
+                    break;
+                }
+                case 'c':
+                {
+                    TileType = 3;
+                    ID = 5;
+                    break;
+                }
+                default:
+                {
+                    TileType = 1;
+                    break;
+                }
+            }
+
+
+
                    return ID;
                }
             ID++;

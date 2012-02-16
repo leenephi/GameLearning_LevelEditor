@@ -43,7 +43,7 @@ void CApp::OnLButtonDown(int mX, int mY)
 
     if((mX < 32 && mY < 128))
     {
-        newTileID = TileWindow.GetTileID(mX, mY);
+        newTileID = TileWindow.GetTileID(mX, mY, newTypeID);
     }
     if(!(mX < 32 && mY < 128))
     {
@@ -56,6 +56,7 @@ void CApp::OnLButtonDown(int mX, int mY)
             tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
 
             CMap* Map;
+
 
             Map->SetTile(tile, newTileID, newTypeID);
         }
@@ -76,6 +77,8 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
                 tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
 
                 CMap* Map;
+
+
 
                 Map->SetTile(tile, newTileID, newTypeID);
             }
