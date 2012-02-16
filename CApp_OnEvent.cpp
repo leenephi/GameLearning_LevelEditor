@@ -41,6 +41,7 @@ void CApp::OnLButtonDown(int mX, int mY)
 {
     CTile* tile;
 
+
     if((mX < 32 && mY < 128))
     {
         newTileID = TileWindow.GetTileID(mX, mY, newTypeID);
@@ -61,6 +62,89 @@ void CApp::OnLButtonDown(int mX, int mY)
             Map->SetTile(tile, newTileID, newTypeID);
         }
     }
+}
+
+void CApp::OnRButtonDown(int mX, int mY)
+{
+    if((mX < 32 && mY < 128))
+    {
+        newTileID = TileWindow.GetTileID(mX, mY, newTypeID);
+    }
+
+    if(!(mX < 32 && mY < 128))
+    {
+        down = true;
+        mXold = mX;
+        mYold = mY;
+    }
+}
+
+
+void CApp::OnRButtonUp(int mX, int mY)
+{
+    if(down)
+    {
+        CTile * tile;
+
+        if(mX < mXold)
+            if(mY < mYold)
+            {
+                for(int Y = mY; Y < mYold; Y++)
+                    for(int X = mX; X < mXold; X++)
+                    {
+                        tile = CArea::AreaControl.GetTile((X - CCamera::CameraControl.GetX()), (Y - CCamera::CameraControl.GetY()));
+
+                        CMap* Map;
+
+                        Map->SetTile(tile, newTileID, newTypeID);
+                    }
+
+            }
+            if(mY > mYold)
+            {
+                for(int Y = mY; Y > mYold; Y--)
+                    for(int X = mX; X < mXold; X++)
+                    {
+                        tile = CArea::AreaControl.GetTile((X - CCamera::CameraControl.GetX()), (Y - CCamera::CameraControl.GetY()));
+
+                        CMap* Map;
+
+                        Map->SetTile(tile, newTileID, newTypeID);
+                    }
+
+            }
+        if(mX > mXold)
+            if(mY < mYold)
+            {
+                for(int Y = mY; Y < mYold; Y++)
+                    for(int X = mX; X > mXold; X--)
+                    {
+                        tile = CArea::AreaControl.GetTile((X - CCamera::CameraControl.GetX()), (Y - CCamera::CameraControl.GetY()));
+
+                        CMap* Map;
+
+                        Map->SetTile(tile, newTileID, newTypeID);
+                    }
+
+            }
+            if(mY > mYold)
+            {
+                for(int Y = mY; Y > mYold; Y--)
+                    for(int X = mX; X > mXold; X--)
+                    {
+                        tile = CArea::AreaControl.GetTile((X - CCamera::CameraControl.GetX()), (Y - CCamera::CameraControl.GetY()));
+
+                        CMap* Map;
+
+                        Map->SetTile(tile, newTileID, newTypeID);
+                    }
+
+            }
+
+    down = false;
+    }
+
+
 }
 
 void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle)

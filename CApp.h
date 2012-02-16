@@ -30,6 +30,11 @@ public:
     int newTileID;
     int newTypeID;
 
+    bool down;
+
+    int mXold;
+    int mYold;
+
     int OnExecute();
 
 public:
@@ -40,6 +45,10 @@ public:
     void OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode);
 
     void OnLButtonDown(int mX, int mY);
+
+    void OnRButtonDown(int mX, int mY);
+
+    void OnRButtonUp(int mX, int mY);
 
     void OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle);
 
