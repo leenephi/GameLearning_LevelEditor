@@ -36,7 +36,7 @@ public:
 
     virtual void OnCleanup();
 
-    int GetTileID(int mX, int mY);
+    int GetTileID(int mX, int mY, int& TileType);
 };
 
 #endif // CTILEWINDOW_H_INCLUDED
