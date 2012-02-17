@@ -63,6 +63,8 @@ public:
     void OnRender();
 
     bool OnCleanup();
+
+    bool InBounds(int mX, int mY);
 };
 
 //==============================================================================
