@@ -24,6 +24,12 @@ private:
 
     SDL_Surface*    Surf_Overlay;
 
+    CTile*          tile;
+
+    CMap*           Map;
+
+    void GetTile(int mX, int mY);
+
 public:
     CApp();
 
