@@ -2,16 +2,16 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Release" />
 	<File name="CApp.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="656" topLine="12" />
+		<Cursor1 position="615" topLine="0" />
 	</File>
 	<File name="CApp.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="603" topLine="16" />
+		<Cursor1 position="660" topLine="0" />
 	</File>
 	<File name="CApp_OnCleanup.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor1 position="413" topLine="0" />
 	</File>
 	<File name="CApp_OnEvent.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="6237" topLine="175" />
+		<Cursor1 position="4899" topLine="129" />
 	</File>
 	<File name="CApp_OnInit.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor1 position="774" topLine="0" />
@@ -22,8 +22,8 @@
 	<File name="CApp_OnRender.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor1 position="411" topLine="0" />
 	</File>
-	<File name="CArea.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="1484" topLine="79" />
+	<File name="CArea.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor1 position="3989" topLine="157" />
 	</File>
 	<File name="CArea.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor1 position="398" topLine="9" />
@@ -34,7 +34,7 @@
 	<File name="CEvent.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor1 position="644" topLine="6" />
 	</File>
-	<File name="CMap.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CMap.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor1 position="496" topLine="39" />
 	</File>
 	<File name="CMap.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -50,7 +50,7 @@
 		<Cursor1 position="267" topLine="0" />
 	</File>
 	<File name="CTileWindow.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="882" topLine="11" />
+		<Cursor1 position="740" topLine="29" />
 	</File>
 	<File name="CTileWindow.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor1 position="683" topLine="6" />

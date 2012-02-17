@@ -39,7 +39,7 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
 
 void CApp::OnLButtonDown(int mX, int mY)
 {
-    CTile* tile;
+
 
 
     if((mX < 32 && mY < 128))
@@ -50,10 +50,7 @@ void CApp::OnLButtonDown(int mX, int mY)
     {
         if(InBounds(mX, mY))
         {
-            tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
-
-            CMap* Map;
-
+            GetTile(mX,mY);
             Map->SetTile(tile, newTileID, newTypeID);
         }
     }
@@ -72,12 +69,7 @@ void CApp::OnRButtonDown(int mX, int mY)
         mYold = mY;
         if(InBounds(mX, mY))
         {
-            CTile* tile;
-            tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
-
-            CMap* Map;
-
-
+            GetTile( mX, mY);
             Map->SetTile(tile, newTileID, newTypeID);
         }
     }
@@ -90,9 +82,6 @@ void CApp::OnRButtonUp(int mX, int mY)
     {
         if(InBounds(mX,mY))
         {
-
-            CTile * tile;
-
             if(mX < mXold)
             {
                 if(mY < mYold)
@@ -102,14 +91,10 @@ void CApp::OnRButtonUp(int mX, int mY)
                         {
                             if(InBounds(X,Y))
                             {
-                                tile = CArea::AreaControl.GetTile((X - CCamera::CameraControl.GetX()), (Y - CCamera::CameraControl.GetY()));
-
-                                CMap* Map;
-
+                                GetTile( X, Y);
                                 Map->SetTile(tile, newTileID, newTypeID);
                             }
                         }
-
                 }
                 if(mY > mYold)
                 {
@@ -118,14 +103,10 @@ void CApp::OnRButtonUp(int mX, int mY)
                         {
                             if(InBounds(X,Y))
                             {
-                                tile = CArea::AreaControl.GetTile((X - CCamera::CameraControl.GetX()), (Y - CCamera::CameraControl.GetY()));
-
-                                CMap* Map;
-
+                                GetTile( X, Y);
                                 Map->SetTile(tile, newTileID, newTypeID);
                             }
                         }
-
                 }
             }
             if(mX > mXold)
@@ -137,14 +118,10 @@ void CApp::OnRButtonUp(int mX, int mY)
                         {
                             if(InBounds(X,Y))
                             {
-                                tile = CArea::AreaControl.GetTile((X - CCamera::CameraControl.GetX()), (Y - CCamera::CameraControl.GetY()));
-
-                                CMap* Map;
-
+                                GetTile( X, Y);
                                 Map->SetTile(tile, newTileID, newTypeID);
                             }
                         }
-
                 }
                 if(mY > mYold)
                 {
@@ -153,35 +130,26 @@ void CApp::OnRButtonUp(int mX, int mY)
                         {
                             if(InBounds(X, Y))
                             {
-                                tile = CArea::AreaControl.GetTile((X - CCamera::CameraControl.GetX()), (Y - CCamera::CameraControl.GetY()));
-
-                                CMap* Map;
-
+                                GetTile( X, Y);
                                 Map->SetTile(tile, newTileID, newTypeID);
                             }
                         }
-
                 }
             }
-
             down = false;
         }
     }
-
 }
 
 void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle)
 {
-    CTile* tile;
-    CMap* Map;
     if (Left)
     {
         if(!(mX < 32 && mY < 128))
         {
             if(InBounds(mX, mY))
             {
-                tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
-
+                GetTile( mX, mY);
                 Map->SetTile(tile, newTileID, newTypeID);
             }
         }
@@ -195,20 +163,13 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
                 if( ((mX - CCamera::CameraControl.GetX()) < MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
                         ((mY - CCamera::CameraControl.GetY()) < MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize) &&
                         ((mYold - CCamera::CameraControl.GetY()) < MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize) &&
-                        ((mXold - CCamera::CameraControl.GetX()) < MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize)
-                  )
+                        ((mXold - CCamera::CameraControl.GetX()) < MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize))
                 {
-
                     // draws tiles but doesn't erase when you go too far
-                    tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), mYold - CCamera::CameraControl.GetY());
-
+                    GetTile( mX, mYold);
                     Map->SetTile(tile, newTileID, newTypeID);
-
-
-                    tile = CArea::AreaControl.GetTile(mXold - CCamera::CameraControl.GetX(), mY - CCamera::CameraControl.GetY());
-
+                    GetTile(mXold, mY);
                     Map->SetTile(tile, newTileID, newTypeID);
-
                 }
             }
         }
@@ -223,6 +184,11 @@ bool CApp::InBounds(int mX, int mY)
             ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
         return true;
     return false;
+}
+
+void CApp::GetTile(int mX, int mY)
+{
+    tile = CArea::AreaControl.GetTile((mX - CCamera::CameraControl.GetX()), (mY - CCamera::CameraControl.GetY()));
 }
 //------------------------------------------------------------------------------
 void CApp::OnExit()
