@@ -21,9 +21,13 @@ private:
 public:
     int                     AreaSize;
 
+    int                     areaWidth;
+
+    int                     areaHeight;
+
     CArea();
 
-    void    OnCreateNew(int areaWidth, int areaHeight);
+    void    OnCreateNew(int nareaWidth, int nareaHeight);
 
     bool    OnLoad(char* File);
 

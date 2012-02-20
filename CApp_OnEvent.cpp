@@ -162,10 +162,10 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
         {
             if(InBounds(mX, mY))
             {
-                if( ((mX - CCamera::CameraControl.GetX()) < MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
-                        ((mY - CCamera::CameraControl.GetY()) < MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize) &&
-                        ((mYold - CCamera::CameraControl.GetY()) < MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize) &&
-                        ((mXold - CCamera::CameraControl.GetX()) < MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize))
+                if( ((mX - CCamera::CameraControl.GetX()) < MAP_WIDTH*TILE_SIZE*CArea::AreaControl.areaWidth) &&
+                        ((mY - CCamera::CameraControl.GetY()) < MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.areaHeight) &&
+                        ((mYold - CCamera::CameraControl.GetY()) < MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.areaHeight) &&
+                        ((mXold - CCamera::CameraControl.GetX()) < MAP_WIDTH*TILE_SIZE*CArea::AreaControl.areaWidth))
                 {
                     // draws tiles but doesn't erase when you go too far
                     GetTile( mX, mYold);
@@ -182,8 +182,8 @@ bool CApp::InBounds(int mX, int mY)
 {
 
     if((mX - CCamera::CameraControl.GetX()) >= 0 && (mY - CCamera::CameraControl.GetY()) >= 0 &&
-            ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.AreaSize) &&
-            ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.AreaSize))
+            ((mX - CCamera::CameraControl.GetX()) <= MAP_WIDTH*TILE_SIZE*CArea::AreaControl.areaWidth) &&
+            ((mY - CCamera::CameraControl.GetY()) <= MAP_HEIGHT*TILE_SIZE*CArea::AreaControl.areaHeight))
         return true;
     return false;
 }

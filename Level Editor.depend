@@ -383,10 +383,10 @@
 
 1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\define.h
 
-1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.h
+1329764184 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.h
 	"CMap.h"
 
-1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.h
+1329757163 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.h
 	<SDL.h>
 	<vector>
 	"CTile.h"
@@ -409,21 +409,21 @@
 1329325086 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329518763 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
+1329758267 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
 	"CArea.h"
 
-1329344110 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
+1329751556 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
 	"CApp.h"
 
 1329332651 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onloop.cpp
 	"CApp.h"
 
-1329425198 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onrender.cpp
+1329758404 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onrender.cpp
 	"CApp.h"
 
-1329332651 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
+1329763861 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
 	"CArea.h"
 	<fstream>
 	<iostream>
@@ -435,7 +435,7 @@
 1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cevent.cpp
 	"CEvent.h"
 
-1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.cpp
+1329757163 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.cpp
 	"CMap.h"
 	<fstream>
 	<iostream>
@@ -736,6 +736,6 @@
 	"CCamera.h"
 	"CSurface.h"
 
-1329418026 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
+1329751556 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
 

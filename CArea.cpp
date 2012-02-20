@@ -16,9 +16,13 @@ CArea::CArea()
 
 //=============================================================================
 
-void CArea::OnCreateNew(int areaWidth, int areaHeight)
+void CArea::OnCreateNew(int nareaWidth, int nareaHeight)
 {
     OnCleanup();
+
+    areaWidth = nareaWidth;
+
+    areaHeight = nareaHeight;
 
     Surf_Tileset = CSurface::OnLoad("./tilesets/game_tiles_1.png");
 
@@ -58,11 +62,15 @@ bool CArea::OnLoad(char* File)
         return false;
     }
 
-    fscanf(FileHandle, "%d\n", &AreaSize);
+    fscanf(FileHandle, "%d:%d\n", &areaWidth, &areaHeight);
 
-    for(int X = 0; X < AreaSize; X++)
+    cout << areaHeight << areaWidth;
+
+    AreaSize = areaHeight* areaWidth;
+
+    for(int X = 0; X < areaWidth; X++)
     {
-        for(int Y = 0; Y < AreaSize; Y++)
+        for(int Y = 0; Y < areaHeight; Y++)
         {
             char MapFile[255];
 
@@ -97,16 +105,20 @@ void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY)
     int FirstID = -CameraX / MapWidth;
     FirstID = FirstID + ((-CameraY / MapHeight) * AreaSize);
 
-    for(int i = 0; i < 4; i++)
+    for(int i = 0; i < 25; i++)
     {
         int ID = FirstID + ((i / 2) * AreaSize) + (i % 2);
 
         if(ID < 0 || ID >= MapList.size()) continue;
 
-        int X = ((ID % AreaSize) * MapWidth) + CameraX;
+
+        int X = ((ID % areaWidth) * MapWidth) + CameraX;
         int Y = ((ID / AreaSize) * MapHeight) + CameraY;
 
         MapList[ID].OnRender(Surf_Display, X, Y);
+
+
+
     }
 }
 
@@ -175,7 +187,7 @@ fwrite(buffer, 1, sizeof(buffer), FileHandle);
 bool CArea::OnSave(char* File, char* tilesetFile)
 {
 
-    int AreaSize = 3;
+    int AreaSize = areaWidth*areaHeight;
 
     ofstream areafile(File);
 
@@ -184,14 +196,14 @@ bool CArea::OnSave(char* File, char* tilesetFile)
     {
         areafile << tilesetFile;
         areafile << "\n";
-        areafile << AreaSize;
+        areafile << areaWidth << ':' << areaHeight;
         areafile << "\n";
 
         int mapSaveCount = 1;
 
-        for(int X = 0; X < AreaSize; X++)
+        for(int X = 0; X < areaWidth; X++)
         {
-            for(int Y = 0; Y < AreaSize; Y++)
+            for(int Y = 0; Y < areaHeight; Y++)
             {
 
                 CMap tempMap;
@@ -220,6 +232,7 @@ bool CArea::OnSave(char* File, char* tilesetFile)
 
         areafile.close();
         return true;
+        OnCleanup();
     }
     cout << "fail" << endl;
     return false;
