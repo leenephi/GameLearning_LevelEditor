@@ -42,11 +42,11 @@ void CApp::OnLButtonDown(int mX, int mY)
 
 
 
-    if((mX < 32 && mY < 128))
+    if((mX < 32 && mY < 256))
     {
         newTileID = TileWindow.GetTileID(mX, mY, newTypeID);
     }
-    if(!(mX < 32 && mY < 128))
+    if(!(mX < 32 && mY < 256))
     {
         if(InBounds(mX, mY))
         {
@@ -58,11 +58,11 @@ void CApp::OnLButtonDown(int mX, int mY)
 
 void CApp::OnRButtonDown(int mX, int mY)
 {
-    if((mX < 32 && mY < 128))
+    if((mX < 32 && mY < 256))
     {
         newTileID = TileWindow.GetTileID(mX, mY, newTypeID);
     }
-    if((!(mX < 32 && mY < 128)))
+    if((!(mX < 32 && mY < 256)))
     {
         down = true;
         mXold = mX;
@@ -145,7 +145,7 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
 {
     if (Left)
     {
-        if(!(mX < 32 && mY < 128))
+        if(!(mX < 32 && mY < 256))
         {
             if(InBounds(mX, mY))
             {
@@ -156,7 +156,7 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
     }
     if (Right)
     {
-        if(!(mX < 32 && mY < 128))
+        if(!(mX < 32 && mY < 256))
         {
             if(InBounds(mX, mY))
             {

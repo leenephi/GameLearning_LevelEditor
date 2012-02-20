@@ -82,7 +82,7 @@ int CTileWindow::GetTileID(int mX, int mY, int &TileType)
                 switcher = 'a';
             else if (ID >= 6 && ID <= 11)
                 switcher = 'b';
-            else
+            else if (ID >= 12 && ID <= 15)
                 switcher = 'c';
 
             switch(switcher)
