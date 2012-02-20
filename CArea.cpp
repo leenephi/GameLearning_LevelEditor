@@ -26,9 +26,9 @@ void CArea::OnCreateNew(int nareaWidth, int nareaHeight)
 
     Surf_Tileset = CSurface::OnLoad("./tilesets/game_tiles_1.png");
 
-    for(int X = 0; X < areaWidth; X++)
+    for(int X = 0; X < areaWidth-1; X++)
     {
-        for(int Y = 0; Y < areaHeight; Y++)
+        for(int Y = 0; Y < areaHeight-1; Y++)
         {
             CMap tempMap;
             tempMap.OnCreateNew();
@@ -66,7 +66,7 @@ bool CArea::OnLoad(char* File)
 
     cout << areaHeight << areaWidth;
 
-    AreaSize = areaHeight* areaWidth;
+    AreaSize = areaWidth;
 
     for(int X = 0; X < areaWidth; X++)
     {
@@ -99,25 +99,58 @@ bool CArea::OnLoad(char* File)
 //-----------------------------------------------------------------------------
 void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY)
 {
+    /*
+    original code
+    int MapWidth  = MAP_WIDTH * TILE_SIZE;
+    int MapHeight = MAP_HEIGHT * TILE_SIZE;
+
+    int FirstID = -CameraX / MapWidth;    int MapWidth  = MAP_WIDTH * TILE_SIZE;
+    int MapHeight = MAP_HEIGHT * TILE_SIZE;
+
+    int FirstID = -CameraX / MapWidth;
+    FirstID = FirstID + ((-CameraY / MapHeight) * AreaSize);
+
+    for(int i = 0; i < 16; i++)
+    {
+        int ID = FirstID + ((i / 2) * AreaSize) + (i % 2);
+
+        if(ID < 0 || ID >= MapList.size()) continue;
+
+        int X = ((ID % AreaSize) * MapWidth) + CameraX;
+        int Y = ((ID / AreaSize) * MapHeight) + CameraY;
+
+        MapList[ID].OnRender(Surf_Display, X, Y);
+    FirstID = FirstID + ((-CameraY / MapHeight) * AreaSize);
+
+    for(int i = 0; i < 16; i++)
+    {
+        int ID = FirstID + ((i / 2) * AreaSize) + (i % 2);
+
+        if(ID < 0 || ID >= MapList.size()) continue;
+
+        int X = ((ID % AreaSize) * MapWidth) + CameraX;
+        int Y = ((ID / AreaSize) * MapHeight) + CameraY;
+
+        MapList[ID].OnRender(Surf_Display, X, Y);
+    original code
+    */
+
     int MapWidth  = MAP_WIDTH * TILE_SIZE;
     int MapHeight = MAP_HEIGHT * TILE_SIZE;
 
     int FirstID = -CameraX / MapWidth;
     FirstID = FirstID + ((-CameraY / MapHeight) * AreaSize);
 
-    for(int i = 0; i < 25; i++)
+    for(int i = 0; i < 16; i++)
     {
         int ID = FirstID + ((i / 2) * AreaSize) + (i % 2);
 
         if(ID < 0 || ID >= MapList.size()) continue;
 
-
-        int X = ((ID % areaWidth) * MapWidth) + CameraX;
+        int X = ((ID % AreaSize) * MapWidth) + CameraX;
         int Y = ((ID / AreaSize) * MapHeight) + CameraY;
 
         MapList[ID].OnRender(Surf_Display, X, Y);
-
-
 
     }
 }
