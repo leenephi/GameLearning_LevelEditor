@@ -23,6 +23,8 @@ public:
 
     CArea();
 
+    void    OnCreateNew(int areaWidth, int areaHeight);
+
     bool    OnLoad(char* File);
 
     void    OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY);

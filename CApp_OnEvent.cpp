@@ -30,6 +30,8 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
         CArea::AreaControl.OnSave("./mapsave/savearea.area", "./tilesets/game_tiles_1.png");
         CApp::OnCleanup();
         break;
+    case SDLK_n:
+        CArea::AreaControl.OnCreateNew(5, 5);
 
     default:
     {

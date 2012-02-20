@@ -12,6 +12,23 @@ CMap::CMap()
 }
 
 //=============================================================================
+
+void CMap::OnCreateNew()
+{
+    TileList.clear();
+    for(int Y = 0; Y < MAP_HEIGHT; Y++)
+    {
+        for(int X = 0; X < MAP_WIDTH; X++)
+        {
+            CTile tempTile;
+            tempTile.TileID = 5;
+            tempTile.TypeID = 1;
+            TileList.push_back(tempTile);
+        }
+    }
+}
+
+//============================================================================
 bool CMap::OnLoad(char* File)
 {
     TileList.clear();

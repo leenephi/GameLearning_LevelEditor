@@ -15,6 +15,27 @@ CArea::CArea()
 }
 
 //=============================================================================
+
+void CArea::OnCreateNew(int areaWidth, int areaHeight)
+{
+    OnCleanup();
+
+    Surf_Tileset = CSurface::OnLoad("./tilesets/game_tiles_1.png");
+
+    for(int X = 0; X < areaWidth; X++)
+    {
+        for(int Y = 0; Y < areaHeight; Y++)
+        {
+            CMap tempMap;
+            tempMap.OnCreateNew();
+            tempMap.Surf_Tileset = Surf_Tileset;
+            MapList.push_back(tempMap);
+        }
+    }
+}
+
+//=============================================================================
+
 bool CArea::OnLoad(char* File)
 {
     OnCleanup();

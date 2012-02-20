@@ -21,6 +21,8 @@ public:
     CMap();
 
 public:
+    void OnCreateNew();
+
     bool OnLoad(char* File);
 
     void OnRender(SDL_Surface* Surf_Display, int MapX, int MapY);
