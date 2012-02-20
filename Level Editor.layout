@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Release" />
-	<File name="CApp.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="615" topLine="0" />
+	<File name="CApp.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="615" topLine="0" />
 	</File>
-	<File name="CApp.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="660" topLine="0" />
+	<File name="CApp.h" open="0" top="0" tabpos="5">
+		<Cursor position="660" topLine="0" />
 	</File>
-	<File name="CApp_OnCleanup.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="413" topLine="0" />
+	<File name="CApp_OnCleanup.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="413" topLine="0" />
 	</File>
-	<File name="CApp_OnEvent.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="1072" topLine="24" />
+	<File name="CApp_OnEvent.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="1078" topLine="66" />
 	</File>
-	<File name="CApp_OnInit.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="610" topLine="0" />
+	<File name="CApp_OnInit.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="280" topLine="5" />
 	</File>
-	<File name="CApp_OnLoop.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="228" topLine="0" />
+	<File name="CApp_OnLoop.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="228" topLine="0" />
 	</File>
-	<File name="CApp_OnRender.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="361" topLine="0" />
+	<File name="CApp_OnRender.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="411" topLine="0" />
 	</File>
-	<File name="CArea.cpp" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="1522" topLine="42" />
+	<File name="CArea.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="3935" topLine="134" />
 	</File>
-	<File name="CArea.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="587" topLine="4" />
+	<File name="CArea.h" open="1" top="0" tabpos="2">
+		<Cursor position="655" topLine="6" />
 	</File>
-	<File name="CEvent.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="5009" topLine="185" />
+	<File name="CEvent.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="5009" topLine="185" />
 	</File>
-	<File name="CEvent.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="644" topLine="6" />
+	<File name="CEvent.h" open="0" top="0" tabpos="0">
+		<Cursor position="644" topLine="6" />
 	</File>
-	<File name="CMap.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="3124" topLine="122" />
+	<File name="CMap.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="690" topLine="12" />
 	</File>
-	<File name="CMap.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="683" topLine="1" />
+	<File name="CMap.h" open="1" top="0" tabpos="4">
+		<Cursor position="434" topLine="11" />
 	</File>
-	<File name="CSurface.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="1540" topLine="27" />
+	<File name="CSurface.cpp" open="0" top="0" tabpos="13">
+		<Cursor position="1540" topLine="27" />
 	</File>
-	<File name="CTile.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="0" topLine="0" />
+	<File name="CTile.cpp" open="0" top="0" tabpos="10">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="CTile.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="267" topLine="0" />
+	<File name="CTile.h" open="0" top="0" tabpos="11">
+		<Cursor position="267" topLine="0" />
 	</File>
-	<File name="CTileWindow.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="2122" topLine="69" />
+	<File name="CTileWindow.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="2122" topLine="69" />
 	</File>
-	<File name="CTileWindow.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="683" topLine="6" />
+	<File name="CTileWindow.h" open="0" top="0" tabpos="0">
+		<Cursor position="683" topLine="6" />
 	</File>
-	<File name="Define.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="116" topLine="0" />
+	<File name="Define.h" open="1" top="0" tabpos="6">
+		<Cursor position="38" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

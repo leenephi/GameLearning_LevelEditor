@@ -26,9 +26,9 @@ void CArea::OnCreateNew(int nareaWidth, int nareaHeight)
 
     Surf_Tileset = CSurface::OnLoad("./tilesets/game_tiles_1.png");
 
-    for(int X = 0; X < areaWidth-1; X++)
+    for(int X = 0; X < areaWidth; X++)
     {
-        for(int Y = 0; Y < areaHeight-1; Y++)
+        for(int Y = 0; Y < areaHeight; Y++)
         {
             CMap tempMap;
             tempMap.OnCreateNew();
@@ -139,16 +139,16 @@ void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY)
     int MapHeight = MAP_HEIGHT * TILE_SIZE;
 
     int FirstID = -CameraX / MapWidth;
-    FirstID = FirstID + ((-CameraY / MapHeight) * AreaSize);
+    FirstID = FirstID + ((-CameraY / MapHeight) * areaWidth);
 
-    for(int i = 0; i < 16; i++)
+    for(int i = 0; i < 6; i++)
     {
-        int ID = FirstID + ((i / 2) * AreaSize) + (i % 2);
+        int ID = FirstID + ((i / 2) * areaWidth) + (i % 2);
 
         if(ID < 0 || ID >= MapList.size()) continue;
 
-        int X = ((ID % AreaSize) * MapWidth) + CameraX;
-        int Y = ((ID / AreaSize) * MapHeight) + CameraY;
+        int X = ((ID % areaWidth) * MapWidth) + CameraX;
+        int Y = ((ID / areaWidth) * MapHeight) + CameraY;
 
         MapList[ID].OnRender(Surf_Display, X, Y);
 
