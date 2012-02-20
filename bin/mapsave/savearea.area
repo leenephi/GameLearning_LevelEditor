@@ -1,7 +1,4 @@
 ./tilesets/game_tiles_1.png
-5:5
+2:5
 ./mapsave/level_map_1.map ./mapsave/level_map_2.map ./mapsave/level_map_3.map ./mapsave/level_map_4.map ./mapsave/level_map_5.map 
 ./mapsave/level_map_6.map ./mapsave/level_map_7.map ./mapsave/level_map_8.map ./mapsave/level_map_9.map ./mapsave/level_map_10.map 
-./mapsave/level_map_11.map ./mapsave/level_map_12.map ./mapsave/level_map_13.map ./mapsave/level_map_14.map ./mapsave/level_map_15.map 
-./mapsave/level_map_16.map ./mapsave/level_map_17.map ./mapsave/level_map_18.map ./mapsave/level_map_19.map ./mapsave/level_map_20.map 
-./mapsave/level_map_21.map ./mapsave/level_map_22.map ./mapsave/level_map_23.map ./mapsave/level_map_24.map ./mapsave/level_map_25.map 
