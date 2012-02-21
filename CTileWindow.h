@@ -27,6 +27,8 @@ public:
 public:
     CTileWindow();
 
+    ~CTileWindow();
+
 public:
     virtual bool OnLoad(char* File, int Width, int Height);
 
