@@ -1,5 +1,6 @@
 //==============================================================================
 #include "CApp.h"
+#include "CText.h"
 
 //==============================================================================
 void CApp::OnRender()
@@ -16,7 +17,7 @@ void CApp::OnRender()
 
     TileWindow.OnRender(Surf_Display);
 
-
+    StringInput::input.OnRender(Surf_Display);
 
     SDL_Flip(Surf_Display);
 }

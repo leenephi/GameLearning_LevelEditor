@@ -2,6 +2,10 @@
 #include "CApp.h"
 #include "CMap.h"
 #include "CArea.h"
+#include "string"
+#include "CText.h"
+
+
 
 //==============================================================================
 void CApp::OnEvent(SDL_Event* Event)
@@ -26,10 +30,18 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
     case SDLK_RIGHT:
         CCamera::CameraControl.OnMove(-CAMERA_SPEED,  0);
         break;
-    case SDLK_ESCAPE:
-        CArea::AreaControl.OnSave("./mapsave/savearea.area", "./tilesets/game_tiles_1.png");
-        CApp::OnCleanup();
+    case SDLK_s:
+        {
+        std::string file;
+        StringInput::input.handle_input(file);
         break;
+        }
+    case SDLK_ESCAPE:
+        {
+            CArea::AreaControl.OnSave("./mapsave/savearea.area", "./tilesets/game_tiles_1.png");
+            CApp::OnCleanup();
+            break;
+        }
     case SDLK_n:
         CArea::AreaControl.OnCreateNew(5, 3);
 

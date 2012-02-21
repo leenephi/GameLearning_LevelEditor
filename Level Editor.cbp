@@ -38,6 +38,7 @@
 		<Unit filename="CApp_OnInit.cpp" />
 		<Unit filename="CApp_OnLoop.cpp" />
 		<Unit filename="CApp_OnRender.cpp" />
+		<Unit filename="CApp_StringInput.cpp" />
 		<Unit filename="CArea.cpp" />
 		<Unit filename="CArea.h" />
 		<Unit filename="CCamera.cpp" />
