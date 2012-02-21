@@ -5,7 +5,7 @@
 CApp::CApp()
 {
     Surf_Display = NULL;
-
+    isTyping = false;
     Running = true;
 }
 

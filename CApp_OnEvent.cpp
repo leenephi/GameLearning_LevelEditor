@@ -16,39 +16,46 @@ void CApp::OnEvent(SDL_Event* Event)
 //==============================================================================
 void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
 {
-    switch(sym)
+    if(!isTyping)
     {
-    case SDLK_UP:
-        CCamera::CameraControl.OnMove( 0,  CAMERA_SPEED);
-        break;
-    case SDLK_DOWN:
-        CCamera::CameraControl.OnMove( 0, -CAMERA_SPEED);
-        break;
-    case SDLK_LEFT:
-        CCamera::CameraControl.OnMove( CAMERA_SPEED,  0);
-        break;
-    case SDLK_RIGHT:
-        CCamera::CameraControl.OnMove(-CAMERA_SPEED,  0);
-        break;
-    case SDLK_s:
-        {
-        std::string file;
-        StringInput::input.handle_input(file);
-        break;
-        }
-    case SDLK_ESCAPE:
-        {
-            CArea::AreaControl.OnSave("./mapsave/savearea.area", "./tilesets/game_tiles_1.png");
-            CApp::OnCleanup();
-            break;
-        }
-    case SDLK_n:
-        CArea::AreaControl.OnCreateNew(5, 3);
+        switch(sym)
+            {
+            case SDLK_UP:
+                CCamera::CameraControl.OnMove( 0,  CAMERA_SPEED);
+                break;
+            case SDLK_DOWN:
+                CCamera::CameraControl.OnMove( 0, -CAMERA_SPEED);
+                break;
+            case SDLK_LEFT:
+                CCamera::CameraControl.OnMove( CAMERA_SPEED,  0);
+                break;
+            case SDLK_RIGHT:
+                CCamera::CameraControl.OnMove(-CAMERA_SPEED,  0);
+                break;
+            case SDLK_s:
+                {
+                isTyping = true;
+                break;
+                }
+            case SDLK_ESCAPE:
+                {
+                    CArea::AreaControl.OnSave("./mapsave/savearea.area", "./tilesets/game_tiles_1.png");
+                    CApp::OnCleanup();
+                    break;
+                }
+            case SDLK_n:
+                CArea::AreaControl.OnCreateNew(5, 3);
 
-    default:
+            default:
+            {
+            }
+            }
+    }
+    else
     {
+        StringInput::input.handle_input(sym, unicode);
     }
-    }
+
 }
 
 void CApp::OnLButtonDown(int mX, int mY)

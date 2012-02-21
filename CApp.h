@@ -26,6 +26,8 @@ class StringInput
 private:
     std::string str;
 
+protected:
+
     SDL_Surface* text;
 
 public:
@@ -35,7 +37,7 @@ public:
 
     ~StringInput();
 
-    void handle_input(std::string&);
+    void handle_input(SDLKey sym, Uint16 unicode);
 
     void OnRender(SDL_Surface* Surf_Display);
 
@@ -62,7 +64,8 @@ public:
 
     CTileWindow TileWindow;
 
-
+    bool isTyping;
+    std::string saveFile;
 
     int newTileID;
     int newTypeID;

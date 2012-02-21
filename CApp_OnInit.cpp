@@ -9,6 +9,11 @@ bool CApp::OnInit()
         return false;
     }
 
+    if( TTF_Init() == -1 )
+    {
+        return false;
+    }
+
     if((Surf_Display = SDL_SetVideoMode(WWIDTH, WHEIGHT, 32, SDL_HWSURFACE | SDL_DOUBLEBUF)) == NULL)
     {
         return false;

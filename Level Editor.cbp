@@ -28,6 +28,7 @@
 			<Add library="mingw32" />
 			<Add library="SDLmain" />
 			<Add library="SDL_image" />
+			<Add library="SDL_ttf" />
 			<Add library="SDL" />
 			<Add directory="..\..\SDL\lib" />
 		</Linker>
