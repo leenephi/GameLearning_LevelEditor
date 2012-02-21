@@ -12,6 +12,10 @@ CTileWindow::CTileWindow()
     Width 	= 0;
     Height 	= 0;
 }
+CTileWindow::~CTileWindow()
+{
+    OnCleanup();
+}
 
 //==============================================================================
 bool CTileWindow::OnLoad(char* File, int Width, int Height)

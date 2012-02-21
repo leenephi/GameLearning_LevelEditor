@@ -7,21 +7,46 @@
 #include <SDL.h>
 
 #include "Define.h"
-
+#include "CText.h"
 #include "CArea.h"
 #include "CCamera.h"
 #include "CEvent.h"
 #include "CSurface.h"
 #include "CTileWindow.h"
+#include "CText.h"
+#include "string"
+#include "CApp.h"
+#include "SDL.h"
+#include "SDL_ttf.h"
+#include "CSurface.h"
 
 //==============================================================================
+class StringInput
+{
+private:
+    std::string str;
+
+    SDL_Surface* text;
+
+public:
+    static StringInput input;
+
+    StringInput();
+
+    ~StringInput();
+
+    void handle_input(std::string&);
+
+    void OnRender(SDL_Surface* Surf_Display);
+
+};
+
+
 class CApp : public CEvent
 {
 private:
     bool            Running;
-
     SDL_Surface*    Surf_Display;
-
     SDL_Surface*    Surf_Overlay;
 
     CTile*          tile;
@@ -31,9 +56,13 @@ private:
     void GetTile(int mX, int mY);
 
 public:
+
+
     CApp();
 
     CTileWindow TileWindow;
+
+
 
     int newTileID;
     int newTypeID;
