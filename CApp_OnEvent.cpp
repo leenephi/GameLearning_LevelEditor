@@ -18,6 +18,12 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
 {
     switch(sym)
     {
+    case SDLK_1:
+        TileWindow.OnLoad("./tilesets/passable_tiles.png", 32, 256);
+        break;
+    case SDLK_2:
+        TileWindow.OnLoad("./tilesets/impassable_tiles.png", 32, 256);
+        break;
     case SDLK_UP:
         CCamera::CameraControl.OnMove( 0,  CAMERA_SPEED);
         break;
@@ -38,7 +44,7 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
         }
     case SDLK_ESCAPE:
         {
-            CArea::AreaControl.OnSave("./mapsave/savearea.area", "./tilesets/game_tiles_1.png");
+            CArea::AreaControl.OnSave("./mapsave/savearea.area", CArea::AreaControl.PassablesFile, CArea::AreaControl.ImpassablesFile);
             CApp::OnCleanup();
             break;
         }
