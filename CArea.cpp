@@ -143,7 +143,7 @@ void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY)
 
     for(int i = 0; i < 6; i++)
     {
-        int ID = FirstID + ((i / 2) * areaWidth) + (i % 2);
+        int ID = FirstID + ((i / 3) * areaWidth) + (i % 3);
 
         if(ID < 0 || ID >= MapList.size()) continue;
 

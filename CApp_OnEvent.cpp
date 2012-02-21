@@ -31,7 +31,7 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
         CApp::OnCleanup();
         break;
     case SDLK_n:
-        CArea::AreaControl.OnCreateNew(5, 10);
+        CArea::AreaControl.OnCreateNew(5, 3);
 
     default:
     {

@@ -11,7 +11,7 @@
 		<Cursor position="413" topLine="0" />
 	</File>
 	<File name="CApp_OnEvent.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="1078" topLine="66" />
+		<Cursor position="1077" topLine="12" />
 	</File>
 	<File name="CApp_OnInit.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="280" topLine="5" />
@@ -23,10 +23,10 @@
 		<Cursor position="411" topLine="0" />
 	</File>
 	<File name="CArea.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="3935" topLine="134" />
+		<Cursor position="3823" topLine="0" />
 	</File>
 	<File name="CArea.h" open="1" top="0" tabpos="2">
-		<Cursor position="655" topLine="6" />
+		<Cursor position="655" topLine="3" />
 	</File>
 	<File name="CEvent.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="5009" topLine="185" />
@@ -38,7 +38,7 @@
 		<Cursor position="690" topLine="12" />
 	</File>
 	<File name="CMap.h" open="1" top="0" tabpos="4">
-		<Cursor position="434" topLine="11" />
+		<Cursor position="434" topLine="0" />
 	</File>
 	<File name="CSurface.cpp" open="0" top="0" tabpos="13">
 		<Cursor position="1540" topLine="27" />
