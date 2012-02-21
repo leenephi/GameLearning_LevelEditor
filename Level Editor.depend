@@ -390,16 +390,16 @@
 
 1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\define.h
 
-1329764184 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.h
+1329860786 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.h
 	"CMap.h"
 
-1329757163 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.h
+1329860288 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.h
 	<SDL.h>
 	<vector>
 	"CTile.h"
 	"CSurface.h"
 
-1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctile.h
+1329860959 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctile.h
 	"Define.h"
 
 1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\csurface.h
@@ -416,14 +416,14 @@
 1329838914 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329857144 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
+1329860705 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
 	"CArea.h"
 	"string"
 	"CText.h"
 
-1329838914 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
+1329861252 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
 	"CApp.h"
 
 1329332651 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onloop.cpp
@@ -433,7 +433,7 @@
 	"CApp.h"
 	"CText.h"
 
-1329838914 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
+1329860917 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
 	"CArea.h"
 	<fstream>
 	<iostream>
@@ -445,7 +445,7 @@
 1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cevent.cpp
 	"CEvent.h"
 
-1329757163 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.cpp
+1329860416 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.cpp
 	"CMap.h"
 	<fstream>
 	<iostream>
@@ -746,7 +746,7 @@
 	"CCamera.h"
 	"CSurface.h"
 
-1329846804 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
+1329861257 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
 
 1329856980 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctext.h
@@ -754,6 +754,6 @@
 1329856815 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctext.cpp
 	"CText.h"
 
-1329857433 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_stringinput.cpp
+1329857531 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_stringinput.cpp
 	"CApp.h"
 

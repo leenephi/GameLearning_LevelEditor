@@ -19,7 +19,7 @@ bool CApp::OnInit()
         return false;
     }
 
-    if(TileWindow.OnLoad("./tilesets/game_tiles_1.png", 32, 256) == false)
+    if(TileWindow.OnLoad("./tilesets/passable_tiles.png", 32, 256) == false)
     {
         return false;
     }
