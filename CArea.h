@@ -14,9 +14,9 @@ public:
     std::vector<CMap>       MapList;
 
 private:
+    SDL_Surface*			Surf_Tileset_Passables;
 
-
-    SDL_Surface*			Surf_Tileset;
+    SDL_Surface*            Surf_Tileset_Impassables;
 
 public:
     int                     AreaSize;
@@ -24,6 +24,10 @@ public:
     int                     areaWidth;
 
     int                     areaHeight;
+
+    char                    PassablesFile[255];
+
+    char                    ImpassablesFile[255];
 
     CArea();
 
@@ -42,7 +46,7 @@ public:
 
     CTile*	GetTile(int X, int Y);
 
-    bool    OnSave(char* File, char* tilesetFile);
+    bool    OnSave(char* File, char*, char*);
 };
 
 //=============================================================================

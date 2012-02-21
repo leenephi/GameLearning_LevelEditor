@@ -8,7 +8,8 @@ using namespace std;
 //=============================================================================
 CMap::CMap()
 {
-    Surf_Tileset = NULL;
+    Surf_Tileset_Passables = NULL;
+    Surf_Tileset_Impassables = NULL;
 }
 
 //=============================================================================
@@ -61,10 +62,10 @@ bool CMap::OnLoad(char* File)
 //-----------------------------------------------------------------------------
 void CMap::OnRender(SDL_Surface* Surf_Display, int MapX, int MapY)
 {
-    if(Surf_Tileset == NULL) return;
+    if(Surf_Tileset_Passables == NULL || Surf_Tileset_Impassables == NULL) return;
 
-    int TilesetWidth  = Surf_Tileset->w / TILE_SIZE;
-    int TilesetHeight = Surf_Tileset->h / TILE_SIZE;
+    int TilesetWidth;
+    int TilesetHeight;
 
     int ID = 0;
 
@@ -81,11 +82,27 @@ void CMap::OnRender(SDL_Surface* Surf_Display, int MapX, int MapY)
             int tX = MapX + (X * TILE_SIZE);
             int tY = MapY + (Y * TILE_SIZE);
 
-            int TilesetX = (TileList[ID].TileID % TilesetWidth) * TILE_SIZE;
-            int TilesetY = (TileList[ID].TileID / TilesetWidth) * TILE_SIZE;
+            if(TileList[ID].TypeID == TILE_TYPE_PASSABLE)
+            {
+                TilesetWidth  = Surf_Tileset_Passables->w / TILE_SIZE;
+                TilesetHeight = Surf_Tileset_Passables->h / TILE_SIZE;
 
-            CSurface::OnDraw(Surf_Display, Surf_Tileset, tX, tY, TilesetX, TilesetY, TILE_SIZE, TILE_SIZE);
+                int TilesetX = (TileList[ID].TileID % TilesetWidth) * TILE_SIZE;
+                int TilesetY = (TileList[ID].TileID / TilesetWidth) * TILE_SIZE;
 
+                CSurface::OnDraw(Surf_Display, Surf_Tileset_Passables, tX, tY, TilesetX, TilesetY, TILE_SIZE, TILE_SIZE);
+            }
+
+            else if(TileList[ID].TypeID == TILE_TYPE_IMPASSABLE)
+            {
+                TilesetWidth  = Surf_Tileset_Impassables->w / TILE_SIZE;
+                TilesetHeight = Surf_Tileset_Impassables->h / TILE_SIZE;
+
+                int TilesetX = (TileList[ID].TileID % TilesetWidth) * TILE_SIZE;
+                int TilesetY = (TileList[ID].TileID / TilesetWidth) * TILE_SIZE;
+
+                CSurface::OnDraw(Surf_Display, Surf_Tileset_Impassables, tX, tY, TilesetX, TilesetY, TILE_SIZE, TILE_SIZE);
+            }
             ID++;
         }
     }

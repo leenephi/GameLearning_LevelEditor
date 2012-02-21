@@ -12,7 +12,8 @@
 class CMap
 {
 public:
-    SDL_Surface*			Surf_Tileset;
+    SDL_Surface*			Surf_Tileset_Passables;
+    SDL_Surface*			Surf_Tileset_Impassables;
 
 private:
     std::vector<CTile>      TileList;
