@@ -10,7 +10,7 @@
 	<File name="CApp_OnCleanup.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="413" topLine="0" />
 	</File>
-	<File name="CApp_OnEvent.cpp" open="1" top="0" tabpos="5">
+	<File name="CApp_OnEvent.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="1077" topLine="12" />
 	</File>
 	<File name="CApp_OnInit.cpp" open="0" top="0" tabpos="5">
@@ -22,11 +22,11 @@
 	<File name="CApp_OnRender.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="411" topLine="0" />
 	</File>
-	<File name="CArea.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="3823" topLine="0" />
+	<File name="CArea.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="582" topLine="0" />
 	</File>
-	<File name="CArea.h" open="1" top="0" tabpos="2">
-		<Cursor position="655" topLine="3" />
+	<File name="CArea.h" open="0" top="0" tabpos="2">
+		<Cursor position="398" topLine="0" />
 	</File>
 	<File name="CEvent.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="5009" topLine="185" />
@@ -34,10 +34,10 @@
 	<File name="CEvent.h" open="0" top="0" tabpos="0">
 		<Cursor position="644" topLine="6" />
 	</File>
-	<File name="CMap.cpp" open="1" top="0" tabpos="3">
+	<File name="CMap.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="690" topLine="12" />
 	</File>
-	<File name="CMap.h" open="1" top="0" tabpos="4">
+	<File name="CMap.h" open="1" top="1" tabpos="0">
 		<Cursor position="434" topLine="0" />
 	</File>
 	<File name="CSurface.cpp" open="0" top="0" tabpos="13">
@@ -55,7 +55,7 @@
 	<File name="CTileWindow.h" open="0" top="0" tabpos="0">
 		<Cursor position="683" topLine="6" />
 	</File>
-	<File name="Define.h" open="1" top="0" tabpos="6">
+	<File name="Define.h" open="0" top="0" tabpos="6">
 		<Cursor position="38" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

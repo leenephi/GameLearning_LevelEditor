@@ -1,7 +1,7 @@
 ./tilesets/game_tiles_1.png
-5:10
-./mapsave/level_map_1.map ./mapsave/level_map_2.map ./mapsave/level_map_3.map ./mapsave/level_map_4.map ./mapsave/level_map_5.map ./mapsave/level_map_6.map ./mapsave/level_map_7.map ./mapsave/level_map_8.map ./mapsave/level_map_9.map ./mapsave/level_map_10.map 
-./mapsave/level_map_11.map ./mapsave/level_map_12.map ./mapsave/level_map_13.map ./mapsave/level_map_14.map ./mapsave/level_map_15.map ./mapsave/level_map_16.map ./mapsave/level_map_17.map ./mapsave/level_map_18.map ./mapsave/level_map_19.map ./mapsave/level_map_20.map 
-./mapsave/level_map_21.map ./mapsave/level_map_22.map ./mapsave/level_map_23.map ./mapsave/level_map_24.map ./mapsave/level_map_25.map ./mapsave/level_map_26.map ./mapsave/level_map_27.map ./mapsave/level_map_28.map ./mapsave/level_map_29.map ./mapsave/level_map_30.map 
-./mapsave/level_map_31.map ./mapsave/level_map_32.map ./mapsave/level_map_33.map ./mapsave/level_map_34.map ./mapsave/level_map_35.map ./mapsave/level_map_36.map ./mapsave/level_map_37.map ./mapsave/level_map_38.map ./mapsave/level_map_39.map ./mapsave/level_map_40.map 
-./mapsave/level_map_41.map ./mapsave/level_map_42.map ./mapsave/level_map_43.map ./mapsave/level_map_44.map ./mapsave/level_map_45.map ./mapsave/level_map_46.map ./mapsave/level_map_47.map ./mapsave/level_map_48.map ./mapsave/level_map_49.map ./mapsave/level_map_50.map 
+5:3
+./mapsave/level_map_1.map ./mapsave/level_map_2.map ./mapsave/level_map_3.map 
+./mapsave/level_map_4.map ./mapsave/level_map_5.map ./mapsave/level_map_6.map 
+./mapsave/level_map_7.map ./mapsave/level_map_8.map ./mapsave/level_map_9.map 
+./mapsave/level_map_10.map ./mapsave/level_map_11.map ./mapsave/level_map_12.map 
+./mapsave/level_map_13.map ./mapsave/level_map_14.map ./mapsave/level_map_15.map 
