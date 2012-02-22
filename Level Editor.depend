@@ -279,17 +279,24 @@
 1329236488 source:g:\software\projects\level editor\ctile.cpp
 	"CTile.h"
 
-1329316326 source:g:\software\projects\leveleditor\capp.cpp
+1329925662 source:g:\software\projects\leveleditor\capp.cpp
 	"CApp.h"
 
-1329751366 g:\software\projects\leveleditor\capp.h
+1329927657 g:\software\projects\leveleditor\capp.h
 	<SDL.h>
 	"Define.h"
+	"CText.h"
 	"CArea.h"
 	"CCamera.h"
 	"CEvent.h"
 	"CSurface.h"
 	"CTileWindow.h"
+	"CText.h"
+	"string"
+	"CApp.h"
+	"SDL.h"
+	"SDL_ttf.h"
+	"CSurface.h"
 
 1329316326 g:\software\projects\leveleditor\define.h
 
@@ -319,16 +326,17 @@
 1329325494 source:g:\software\projects\leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329751366 source:g:\software\projects\leveleditor\capp_oninit.cpp
+1329926886 source:g:\software\projects\leveleditor\capp_oninit.cpp
 	"CApp.h"
 
 1329316326 source:g:\software\projects\leveleditor\capp_onloop.cpp
 	"CApp.h"
 
-1329764842 source:g:\software\projects\leveleditor\capp_onrender.cpp
+1329858443 source:g:\software\projects\leveleditor\capp_onrender.cpp
 	"CApp.h"
+	"CText.h"
 
-1329773891 source:g:\software\projects\leveleditor\carea.cpp
+1329833250 source:g:\software\projects\leveleditor\carea.cpp
 	"CArea.h"
 	<fstream>
 	<iostream>
@@ -352,19 +360,21 @@
 1329316326 source:g:\software\projects\leveleditor\ctile.cpp
 	"CTile.h"
 
-1329771090 source:g:\software\projects\leveleditor\capp_onevent.cpp
+1329927673 source:g:\software\projects\leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
 	"CArea.h"
+	"string"
+	"CText.h"
 
 1329246024 D
 
-1329410147 g:\software\projects\leveleditor\ctilewindow.h
+1329858443 g:\software\projects\leveleditor\ctilewindow.h
 	"CArea.h"
 	"CCamera.h"
 	"CSurface.h"
 
-1329751366 source:g:\software\projects\leveleditor\ctilewindow.cpp
+1329858443 source:g:\software\projects\leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
 
 1329256303 ow.h"
@@ -755,5 +765,15 @@
 	"CText.h"
 
 1329857433 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_stringinput.cpp
+	"CApp.h"
+
+1329858443 g:\software\projects\leveleditor\ctext.h
+
+1326595440 g:\software\sdl\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1329925690 source:g:\software\projects\leveleditor\capp_stringinput.cpp
 	"CApp.h"
 

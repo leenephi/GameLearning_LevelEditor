@@ -11,6 +11,7 @@
 void CApp::OnEvent(SDL_Event* Event)
 {
     CEvent::OnEvent(Event);
+    isTyping = false;
 }
 
 //==============================================================================
@@ -32,8 +33,12 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
         break;
     case SDLK_s:
         {
-        std::string file;
-        StringInput::input.handle_input(file);
+        bool isTyping = true;
+        while(isTyping)
+        {
+            StringInput::input.handle_input();
+        }
+
         break;
         }
     case SDLK_ESCAPE:

@@ -35,7 +35,7 @@ public:
 
     ~StringInput();
 
-    void handle_input(std::string&);
+    void handle_input();
 
     void OnRender(SDL_Surface* Surf_Display);
 
@@ -46,6 +46,8 @@ class CApp : public CEvent
 {
 private:
     bool            Running;
+    bool            isTyping;
+
     SDL_Surface*    Surf_Display;
     SDL_Surface*    Surf_Overlay;
 

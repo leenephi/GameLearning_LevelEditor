@@ -17,7 +17,7 @@ StringInput::~StringInput()
     SDL_EnableUNICODE(SDL_DISABLE);
 }
 
-void StringInput::handle_input(std::string &returning)
+void StringInput::handle_input()
 {
     SDL_Event event;
     if(event.type == SDL_KEYDOWN)
@@ -70,7 +70,6 @@ void StringInput::handle_input(std::string &returning)
             text = TTF_RenderText_Solid( font, str.c_str(), textColor );
         }
     }
-    returning = str;
 }
 
 void StringInput::OnRender(SDL_Surface* Surf_Display)
