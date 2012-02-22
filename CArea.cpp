@@ -24,7 +24,8 @@ void CArea::OnCreateNew(int nareaWidth, int nareaHeight)
 
     areaHeight = nareaHeight;
 
-    Surf_Tileset = CSurface::OnLoad("./tilesets/game_tiles_1.png");
+    Surf_Tileset_Passables = CSurface::OnLoad(PassablesFile);
+    Surf_Tileset_Impassables = CSurface::OnLoad(ImpassablesFile);
 
     for(int X = 0; X < areaWidth; X++)
     {
@@ -32,7 +33,8 @@ void CArea::OnCreateNew(int nareaWidth, int nareaHeight)
         {
             CMap tempMap;
             tempMap.OnCreateNew();
-            tempMap.Surf_Tileset = Surf_Tileset;
+            tempMap.Surf_Tileset_Passables = Surf_Tileset_Passables;
+            tempMap.Surf_Tileset_Impassables     = Surf_Tileset_Impassables;
             MapList.push_back(tempMap);
         }
     }
@@ -42,6 +44,7 @@ void CArea::OnCreateNew(int nareaWidth, int nareaHeight)
 
 bool CArea::OnLoad(char* File)
 {
+
     OnCleanup();
 
     FILE* FileHandle = fopen(File, "r");
@@ -51,30 +54,36 @@ bool CArea::OnLoad(char* File)
         return false;
     }
 
-    char TilesetFile[255];
+    fscanf(FileHandle, "%s\n", PassablesFile);
+    fscanf(FileHandle, "%s\n", ImpassablesFile);
 
-    fscanf(FileHandle, "%s\n", TilesetFile);
-
-    if((Surf_Tileset = CSurface::OnLoad(TilesetFile)) == false)
+    if((Surf_Tileset_Passables = CSurface::OnLoad(PassablesFile)) == false)
     {
-        fclose(FileHandle);
-
+        return false;
+    }
+    if((Surf_Tileset_Impassables = CSurface::OnLoad(ImpassablesFile)) == false)
+    {
         return false;
     }
 
     fscanf(FileHandle, "%d:%d\n", &areaWidth, &areaHeight);
 
-    cout << areaHeight << areaWidth;
+    // I added the MapWidth and MapHeight here for the sake of adding enemies in CMap::OnLoad()
 
-    AreaSize = areaWidth;
+    int ID = 0;
+    int MapWidth  = MAP_WIDTH * TILE_SIZE;
+    int MapHeight = MAP_HEIGHT * TILE_SIZE;
 
-    for(int X = 0; X < areaWidth; X++)
+    for(int Y = 0; Y < areaHeight; Y++)
     {
-        for(int Y = 0; Y < areaHeight; Y++)
+        for(int X = 0; X < areaWidth; X++)
         {
             char MapFile[255];
 
-            fscanf(FileHandle, "%s ", MapFile);
+            fscanf(FileHandle, "%s255 ", MapFile);
+
+            int X = ((ID % areaWidth) * MapWidth);
+            int Y = ((ID / areaWidth) * MapHeight);
 
             CMap tempMap;
             if(tempMap.OnLoad(MapFile) == false)
@@ -84,9 +93,11 @@ bool CArea::OnLoad(char* File)
                 return false;
             }
 
-            tempMap.Surf_Tileset = Surf_Tileset;
+            tempMap.Surf_Tileset_Passables = Surf_Tileset_Passables;
+            tempMap.Surf_Tileset_Impassables = Surf_Tileset_Impassables;
 
             MapList.push_back(tempMap);
+            ID++;
         }
         fscanf(FileHandle, "\n");
     }
@@ -120,18 +131,7 @@ void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY)
         int Y = ((ID / AreaSize) * MapHeight) + CameraY;
 
         MapList[ID].OnRender(Surf_Display, X, Y);
-    FirstID = FirstID + ((-CameraY / MapHeight) * AreaSize);
 
-    for(int i = 0; i < 16; i++)
-    {
-        int ID = FirstID + ((i / 2) * AreaSize) + (i % 2);
-
-        if(ID < 0 || ID >= MapList.size()) continue;
-
-        int X = ((ID % AreaSize) * MapWidth) + CameraX;
-        int Y = ((ID / AreaSize) * MapHeight) + CameraY;
-
-        MapList[ID].OnRender(Surf_Display, X, Y);
     original code
     */
 
@@ -158,11 +158,13 @@ void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY)
 //-----------------------------------------------------------------------------
 void CArea::OnCleanup()
 {
-
-
-    if(Surf_Tileset)
+    if(Surf_Tileset_Passables)
     {
-        SDL_FreeSurface(Surf_Tileset);
+        SDL_FreeSurface(Surf_Tileset_Passables);
+    }
+    if(Surf_Tileset_Impassables)
+    {
+        SDL_FreeSurface(Surf_Tileset_Impassables);
     }
 
     MapList.clear();
@@ -175,7 +177,7 @@ CMap* CArea::GetMap(int X, int Y)
     int MapHeight = MAP_HEIGHT * TILE_SIZE;
 
     int ID = X / MapWidth;
-    ID = ID + ((Y / MapHeight) * AreaSize);
+    ID = ID + ((Y / MapHeight) * areaWidth);
 
     if(ID < 0 || ID >= MapList.size())
     {
@@ -217,7 +219,7 @@ int buffer[] = {tempTile.TileID, ':', tempTile.TypeID, ' '};
 fwrite(buffer, 1, sizeof(buffer), FileHandle);
 */
 
-bool CArea::OnSave(char* File, char* tilesetFile)
+bool CArea::OnSave(char* File, char* PassablesFile, char* ImpassablesFile)
 {
 
     int AreaSize = areaWidth*areaHeight;
@@ -227,7 +229,9 @@ bool CArea::OnSave(char* File, char* tilesetFile)
 
     if(areafile.is_open())
     {
-        areafile << tilesetFile;
+        areafile << PassablesFile;
+        areafile << "\n";
+        areafile << ImpassablesFile;
         areafile << "\n";
         areafile << areaWidth << ':' << areaHeight;
         areafile << "\n";

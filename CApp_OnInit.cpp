@@ -21,17 +21,19 @@ bool CApp::OnInit()
 
     if(CArea::AreaControl.OnLoad("./maps/area.area") == false)
     {
+
         return false;
     }
 
-    if(TileWindow.OnLoad("./tilesets/game_tiles_1.png", 32, 256) == false)
+    if(TileWindow.OnLoad("./tilesets/passable_tiles.png", 32, 48) == false)
     {
+
         return false;
-    }
+    }else TileWindow.Active = 1;
 
     SDL_EnableKeyRepeat(1, SDL_DEFAULT_REPEAT_INTERVAL / 3);
 
-    newTileID = 10;
+    newTileID = 0;
     newTypeID = 1;
 
     return true;

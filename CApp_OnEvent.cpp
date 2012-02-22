@@ -19,6 +19,24 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
 {
     switch(sym)
     {
+    case SDLK_1:
+
+            TileWindow.OnLoad("./tilesets/passable_tiles.png", 32, 48);
+            TileWindow.Active = 1;
+            break;
+
+    case SDLK_2:
+
+            TileWindow.OnLoad("./tilesets/impassable_tiles.png", 32, 128);
+            TileWindow.Active = 2;
+            break;
+
+    case SDLK_3:
+
+            TileWindow.OnLoad("./tilesets/enemy_tiles.png", 32, 128);
+            TileWindow.Active = 3;
+            break;
+
     case SDLK_UP:
         CCamera::CameraControl.OnMove( 0,  CAMERA_SPEED);
         break;
@@ -43,7 +61,7 @@ void CApp::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode)
         }
     case SDLK_ESCAPE:
         {
-            CArea::AreaControl.OnSave("./mapsave/savearea.area", "./tilesets/game_tiles_1.png");
+            CArea::AreaControl.OnSave("./mapsave/savearea.area", CArea::AreaControl.PassablesFile, CArea::AreaControl.ImpassablesFile);
             CApp::OnCleanup();
             break;
         }
@@ -61,11 +79,12 @@ void CApp::OnLButtonDown(int mX, int mY)
 
 
 
-    if((mX < 32 && mY < 256))
+    if((mX < TileWindow.Width && mY < TileWindow.Height))
     {
         newTileID = TileWindow.GetTileID(mX, mY, newTypeID);
+        newTypeID = TileWindow.Active;
     }
-    if(!(mX < 32 && mY < 256))
+    if(!(mX < TileWindow.Width && mY < TileWindow.Height))
     {
         if(InBounds(mX, mY))
         {
@@ -77,11 +96,12 @@ void CApp::OnLButtonDown(int mX, int mY)
 
 void CApp::OnRButtonDown(int mX, int mY)
 {
-    if((mX < 32 && mY < 256))
+    if((mX < TileWindow.Width && mY < TileWindow.Height))
     {
         newTileID = TileWindow.GetTileID(mX, mY, newTypeID);
+        newTypeID = TileWindow.Active;
     }
-    if((!(mX < 32 && mY < 256)))
+    if((!(mX < TileWindow.Width && mY < TileWindow.Height)))
     {
         down = true;
         mXold = mX;
@@ -164,7 +184,7 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
 {
     if (Left)
     {
-        if(!(mX < 32 && mY < 256))
+        if(!(mX < TileWindow.Width && mY < TileWindow.Height))
         {
             if(InBounds(mX, mY))
             {
@@ -175,7 +195,7 @@ void CApp::OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,
     }
     if (Right)
     {
-        if(!(mX < 32 && mY < 256))
+        if(!(mX < TileWindow.Width && mY < TileWindow.Height))
         {
             if(InBounds(mX, mY))
             {

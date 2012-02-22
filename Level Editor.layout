@@ -4,26 +4,26 @@
 	<File name="CApp.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="270" topLine="0" />
 	</File>
-	<File name="CApp.h" open="1" top="0" tabpos="4">
-		<Cursor position="755" topLine="8" />
+	<File name="CApp.h" open="1" top="0" tabpos="3">
+		<Cursor position="792" topLine="30" />
 	</File>
 	<File name="CApp_OnCleanup.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="329" topLine="0" />
 	</File>
-	<File name="CApp_OnEvent.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="1558" topLine="38" />
+	<File name="CApp_OnEvent.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="663" topLine="0" />
 	</File>
-	<File name="CApp_OnInit.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="347" topLine="1" />
+	<File name="CApp_OnInit.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="444" topLine="0" />
 	</File>
 	<File name="CApp_OnLoop.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="228" topLine="0" />
+		<Cursor position="207" topLine="0" />
 	</File>
-	<File name="CApp_OnRender.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="608" topLine="0" />
+	<File name="CApp_OnRender.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="593" topLine="0" />
 	</File>
-	<File name="CApp_StringInput.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="1806" topLine="31" />
+	<File name="CApp_StringInput.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="2416" topLine="56" />
 	</File>
 	<File name="CArea.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="294" topLine="245" />
@@ -31,11 +31,11 @@
 	<File name="CArea.h" open="0" top="0" tabpos="2">
 		<Cursor position="387" topLine="9" />
 	</File>
-	<File name="CEvent.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="4588" topLine="0" />
+	<File name="CEvent.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="463" topLine="78" />
 	</File>
-	<File name="CEvent.h" open="0" top="0" tabpos="0">
-		<Cursor position="291" topLine="6" />
+	<File name="CEvent.h" open="1" top="0" tabpos="7">
+		<Cursor position="265" topLine="0" />
 	</File>
 	<File name="CMap.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="550" topLine="18" />

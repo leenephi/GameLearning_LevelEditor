@@ -19,6 +19,7 @@ public:
 
     int		Width;
     int		Height;
+    int     Active;
 
 public:
     int		Type;

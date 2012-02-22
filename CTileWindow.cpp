@@ -11,6 +11,7 @@ CTileWindow::CTileWindow()
 
     Width 	= 0;
     Height 	= 0;
+    Active  = 0;
 }
 CTileWindow::~CTileWindow()
 {
@@ -76,48 +77,16 @@ int CTileWindow::GetTileID(int mX, int mY, int &TileType)
 
             // if the mouse click was within the bounds of this tile...
             if(mX > tileX && mX < tileX + TILE_SIZE &&
-               mY > tileY && mY < tileY + TILE_SIZE)
-               {
-                   // then return the tile's ID!
-
-            char switcher;
-
-            if (ID >= 0 && ID <= 5)
-                switcher = 'a';
-            else if (ID >= 6 && ID <= 11)
-                switcher = 'b';
-            else if (ID >= 12 && ID <= 15)
-                switcher = 'c';
-
-            switch(switcher)
+                    mY > tileY && mY < tileY + TILE_SIZE)
             {
-                case 'a':
-                {
-                    TileType = 1;
-                    break;
-                }
-                case 'b':
-                {
-                    TileType = 2;
-                    break;
-                }
-                case 'c':
-                {
-                    TileType = 3;
-                    ID = 5;
-                    break;
-                }
-                default:
-                {
-                    TileType = 1;
-                    break;
-                }
+                // then return the tile's ID!
+
+
+
+
+
+                return ID;
             }
-
-
-
-                   return ID;
-               }
             ID++;
         }
     }

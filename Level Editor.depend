@@ -282,7 +282,7 @@
 1329925662 source:g:\software\projects\leveleditor\capp.cpp
 	"CApp.h"
 
-1329927657 g:\software\projects\leveleditor\capp.h
+1329938578 g:\software\projects\leveleditor\capp.h
 	<SDL.h>
 	"Define.h"
 	"CText.h"
@@ -300,16 +300,16 @@
 
 1329316326 g:\software\projects\leveleditor\define.h
 
-1329764842 g:\software\projects\leveleditor\carea.h
+1329938898 g:\software\projects\leveleditor\carea.h
 	"CMap.h"
 
-1329755617 g:\software\projects\leveleditor\cmap.h
+1329938898 g:\software\projects\leveleditor\cmap.h
 	<SDL.h>
 	<vector>
 	"CTile.h"
 	"CSurface.h"
 
-1329316326 g:\software\projects\leveleditor\ctile.h
+1329938898 g:\software\projects\leveleditor\ctile.h
 	"Define.h"
 
 1329316326 g:\software\projects\leveleditor\csurface.h
@@ -326,17 +326,17 @@
 1329325494 source:g:\software\projects\leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329926886 source:g:\software\projects\leveleditor\capp_oninit.cpp
+1329938900 source:g:\software\projects\leveleditor\capp_oninit.cpp
 	"CApp.h"
 
-1329316326 source:g:\software\projects\leveleditor\capp_onloop.cpp
+1329938578 source:g:\software\projects\leveleditor\capp_onloop.cpp
 	"CApp.h"
 
-1329858443 source:g:\software\projects\leveleditor\capp_onrender.cpp
+1329938578 source:g:\software\projects\leveleditor\capp_onrender.cpp
 	"CApp.h"
 	"CText.h"
 
-1329833250 source:g:\software\projects\leveleditor\carea.cpp
+1329938898 source:g:\software\projects\leveleditor\carea.cpp
 	"CArea.h"
 	<fstream>
 	<iostream>
@@ -348,7 +348,7 @@
 1329316326 source:g:\software\projects\leveleditor\cevent.cpp
 	"CEvent.h"
 
-1329755993 source:g:\software\projects\leveleditor\cmap.cpp
+1329938898 source:g:\software\projects\leveleditor\cmap.cpp
 	"CMap.h"
 	<fstream>
 	<iostream>
@@ -360,7 +360,7 @@
 1329316326 source:g:\software\projects\leveleditor\ctile.cpp
 	"CTile.h"
 
-1329927673 source:g:\software\projects\leveleditor\capp_onevent.cpp
+1329938900 source:g:\software\projects\leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
 	"CArea.h"
@@ -369,20 +369,20 @@
 
 1329246024 D
 
-1329858443 g:\software\projects\leveleditor\ctilewindow.h
+1329938898 g:\software\projects\leveleditor\ctilewindow.h
 	"CArea.h"
 	"CCamera.h"
 	"CSurface.h"
 
-1329858443 source:g:\software\projects\leveleditor\ctilewindow.cpp
+1329938898 source:g:\software\projects\leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
 
 1329256303 ow.h"
 
-1329517832 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.cpp
+1329929999 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.cpp
 	"CApp.h"
 
-1329857292 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.h
+1329929999 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.h
 	<SDL.h>
 	"Define.h"
 	"CText.h"
@@ -400,16 +400,16 @@
 
 1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\define.h
 
-1329764184 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.h
+1329860786 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.h
 	"CMap.h"
 
-1329757163 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.h
+1329860288 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.h
 	<SDL.h>
 	<vector>
 	"CTile.h"
 	"CSurface.h"
 
-1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctile.h
+1329860959 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctile.h
 	"Define.h"
 
 1329324187 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\csurface.h
@@ -426,14 +426,14 @@
 1329838914 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329857144 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
+1329937623 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
 	"CArea.h"
 	"string"
 	"CText.h"
 
-1329838914 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
+1329936169 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
 	"CApp.h"
 
 1329332651 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onloop.cpp
@@ -443,7 +443,7 @@
 	"CApp.h"
 	"CText.h"
 
-1329838914 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
+1329936481 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
 	"CArea.h"
 	<fstream>
 	<iostream>
@@ -455,7 +455,7 @@
 1329324187 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cevent.cpp
 	"CEvent.h"
 
-1329757163 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.cpp
+1329860416 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\cmap.cpp
 	"CMap.h"
 	<fstream>
 	<iostream>
@@ -751,12 +751,12 @@
 	<iostream>
 	<sstream>
 
-1329846805 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.h
+1329936754 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.h
 	"CArea.h"
 	"CCamera.h"
 	"CSurface.h"
 
-1329846804 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
+1329937402 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
 
 1329856980 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctext.h
@@ -764,7 +764,7 @@
 1329856815 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctext.cpp
 	"CText.h"
 
-1329857433 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_stringinput.cpp
+1329929999 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_stringinput.cpp
 	"CApp.h"
 
 1329858443 g:\software\projects\leveleditor\ctext.h
@@ -774,6 +774,6 @@
 	"begin_code.h"
 	"close_code.h"
 
-1329925690 source:g:\software\projects\leveleditor\capp_stringinput.cpp
+1329938578 source:g:\software\projects\leveleditor\capp_stringinput.cpp
 	"CApp.h"
 
