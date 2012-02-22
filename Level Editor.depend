@@ -369,10 +369,10 @@
 
 1329256303 ow.h"
 
-1329517832 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.cpp
+1329929999 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.cpp
 	"CApp.h"
 
-1329857292 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.h
+1329929999 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp.h
 	<SDL.h>
 	"Define.h"
 	"CText.h"
@@ -416,14 +416,14 @@
 1329838914 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oncleanup.cpp
 	"CApp.h"
 
-1329860705 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
+1329937623 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onevent.cpp
 	"CApp.h"
 	"CMap.h"
 	"CArea.h"
 	"string"
 	"CText.h"
 
-1329861252 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
+1329936169 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_oninit.cpp
 	"CApp.h"
 
 1329332651 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_onloop.cpp
@@ -433,7 +433,7 @@
 	"CApp.h"
 	"CText.h"
 
-1329860917 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
+1329936481 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\carea.cpp
 	"CArea.h"
 	<fstream>
 	<iostream>
@@ -741,12 +741,12 @@
 	<iostream>
 	<sstream>
 
-1329846805 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.h
+1329936754 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.h
 	"CArea.h"
 	"CCamera.h"
 	"CSurface.h"
 
-1329861257 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
+1329937402 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctilewindow.cpp
 	"CTileWindow.h"
 
 1329856980 c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctext.h
@@ -754,6 +754,6 @@
 1329856815 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\ctext.cpp
 	"CText.h"
 
-1329857531 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_stringinput.cpp
+1329929999 source:c:\documents and settings\sjohn_chambers\gamelearning_leveleditor\capp_stringinput.cpp
 	"CApp.h"
 

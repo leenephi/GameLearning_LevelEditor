@@ -131,18 +131,7 @@ void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY)
         int Y = ((ID / AreaSize) * MapHeight) + CameraY;
 
         MapList[ID].OnRender(Surf_Display, X, Y);
-    FirstID = FirstID + ((-CameraY / MapHeight) * AreaSize);
 
-    for(int i = 0; i < 16; i++)
-    {
-        int ID = FirstID + ((i / 2) * AreaSize) + (i % 2);
-
-        if(ID < 0 || ID >= MapList.size()) continue;
-
-        int X = ((ID % AreaSize) * MapWidth) + CameraX;
-        int Y = ((ID / AreaSize) * MapHeight) + CameraY;
-
-        MapList[ID].OnRender(Surf_Display, X, Y);
     original code
     */
 
@@ -188,7 +177,7 @@ CMap* CArea::GetMap(int X, int Y)
     int MapHeight = MAP_HEIGHT * TILE_SIZE;
 
     int ID = X / MapWidth;
-    ID = ID + ((Y / MapHeight) * AreaSize);
+    ID = ID + ((Y / MapHeight) * areaWidth);
 
     if(ID < 0 || ID >= MapList.size())
     {
